@@ -1,0 +1,9 @@
+python-docx
+scikit-learn
+joblib
+scipy
+pillow
+sentence-transformers
+chromadb
+pdfplumber
+tabula-py

@@ -1,0 +1,11 @@
+# 默认忽略的文件
+/shelf/
+/workspace.xml
+# Python
+__pycache__/
+*.pyc
+
+# Virtual env
+venv/
+.venv/
+env/
