@@ -3,3 +3,32 @@
 venv/
 .venv/
 env/
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Local tooling
+.idea/
+.vscode/
+
+# Data / outputs
+data/
+*.mmd
+*.md
+*.pdf
+*.docx
+*.png
+*.jpg
+*.jpeg
+*.log
