@@ -1,169 +1,1233 @@
 [
   {
     "id": "pdf_table_0001",
+    "caption": "PDF第2页表1",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n党参、黄 、三七、 \\\\\n\\hline\n珀、甘松 物料属性 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 2
+  },
+  {
+    "id": "pdf_table_0002",
+    "caption": "PDF第2页表2",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n格原 \\\\\n\\hline\n料属 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 2
+  },
+  {
+    "id": "pdf_table_0003",
+    "caption": "PDF第2页表4",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n浸膏 \\\\\n\\hline\n物料属 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 2
+  },
+  {
+    "id": "pdf_table_0004",
+    "caption": "PDF第2页表6",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n稳心颗 \\\\\n\\hline\n物料属 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 2
+  },
+  {
+    "id": "pdf_table_0005",
+    "caption": "PDF第2页表8",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n成品 \\\\\n\\hline\n物料属性 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 2
+  },
+  {
+    "id": "pdf_table_0006",
     "caption": "PDF第3页表1",
-    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l}\n\\hline\n序 号 & 区 块 & 设 备 & 功能 & 投料数据 & 出料数据 & 过程参数 & 检测装备 \\\\\n\\hline\nP & 前 处 理 & 前 处 理 设 备 & 1. 录 入 党参、 黄精、 三七、 琥珀、 甘松属 性 2. 接 收 生产工 单并下 达生产 指令 3. 实时 采集区 块内环 境数 据,超 限报警 & 党参、黄精、三七、琥珀、甘松 基础数据:批号、重量、产地 采收日期、性状、鉴别 党参、黄精、三七、琥珀、甘松 质量属性数据:重金属残留量 有机农药残留量、酸不溶性灰 分、浸出物、二氧化硫、微生物 限度 & 合格原料基础数据:批号、重量、产 地、采收日期、性状、鉴别 合格原料质量属性数据:重金属残留 量、有机农药残留量、酸不溶性灰分 浸出物、党参炔苷含量、原薯蓣皂苷 含量、三七皂苷 R1含量、人参皂苷 Rb1含量、人参皂苷 Rg1含量、人参 皂苷 Rd含量、绿原酸含量、新绿原 酸含量、隐绿原酸含量、异绿原酸 A 含量、总糖含量 & 环境监测数据:温 度、湿度、光照强度 PM2.5、可燃气体含 量、洁净区气压、悬 浮粒子含量、空调风 速 & 条码枪 悬浮粒子计 数器 乙醇气体检 测报警器 风速传感器 压差传感器 压缩空气流 量计 分析仪器 温度计 湿度计 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l | l | l | l | l | l | l}\n\\hline\nUnnamed: 0 & Unnamed: 1 & Unnamed: 2 & Unnamed: 3 功能 & 区 投料数据 & Unnamed: 4 出料数据 & Unnamed: 5 过程参数 & 设 检测装备 & Unnamed: 6 & 功能 & 投料数据 & 出料数据 & 过程参数 & 检测装备 \\\\\n\\hline\n & 块 & 备 &  &  &  &  &  &  &  &  &  &  &  \\\\\nP & 前 处 理 & 前 处 理 设 备 & 1. 录 入 党参、 黄精、 三七、 琥珀、 甘松属 性 2. 接 收 生产工 单并下 达生产 指令 3. 实时 采集区 块内环 境数 据,超 限报警 & 党参、黄精、三七、琥珀、甘松 基础数据:批号、重量、产地、 采收日期、性状、鉴别 党参、黄精、三七、琥珀、甘松 质量属性数据:重金属残留量、 有机农药残留量、酸不溶性灰 分、浸出物、二氧化硫、微生物 限度 & 合格原料基础数据:批号、重量、产 地、采收日期、性状、鉴别 合格原料质量属性数据:重金属残留 量、有机农药残留量、酸不溶性灰分 浸出物、党参炔苷含量、原薯蓣皂苷 含量、三七皂苷 R1 含量、人参皂苷 Rb1 含量、人参皂苷 Rg1 含量、人参 皂苷 Rd 含量、绿原酸含量、新绿原 酸含量、隐绿原酸含量、异绿原酸 A 含量、总糖含量 & 环境监测数据:温 度、湿度、光照强度 PM2.5、可燃气体含 量、洁净区气压、悬 浮粒子含量、空调风 速 & 条码枪 悬浮粒子计 数器 乙醇气体检 测报警器 风速传感器 压差传感器 压缩空气流 量计 分析仪器 温度计 湿度计 &  &  &  &  &  &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
     "source_pdf": "精益六西格玛补充方案.pdf",
     "page": 3
   },
   {
-    "id": "pdf_table_0002",
+    "id": "pdf_table_0007",
+    "caption": "PDF第3页表2",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n功能 \\\\\n\\hline\n功能 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 3
+  },
+  {
+    "id": "pdf_table_0008",
+    "caption": "PDF第3页表3",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n投料数据 \\\\\n\\hline\n投料数据 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 3
+  },
+  {
+    "id": "pdf_table_0009",
+    "caption": "PDF第3页表4",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n出料数据 \\\\\n\\hline\n出料数据 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 3
+  },
+  {
+    "id": "pdf_table_0010",
+    "caption": "PDF第3页表5",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n过程参数 \\\\\n\\hline\n过程参数 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 3
+  },
+  {
+    "id": "pdf_table_0011",
+    "caption": "PDF第3页表6",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n检测装备 \\\\\n\\hline\n检测装备 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 3
+  },
+  {
+    "id": "pdf_table_0012",
     "caption": "PDF第4页表1",
-    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l}\n\\hline\n序 号 & 区 块 & 设 备 & 功能 & 投料数据 & 出料数据 & 过程参数 & 检测装备 \\\\\n\\hline\nE & 提 取 纯 化 & 提 取 纯 化 设 备 & 1. 录 入 合格原 料属性 2. 接 收 生产工 单并下 达生产 指令 3. 实时 采集区 块内环 境数 据,超 限报警 & 合格原料基础数据:批号、重量 产地、采收日期、性状、鉴别 & 浸膏基础数据:批号、体积、生产日 期 & 环境监测数据:温 度、湿度、光照强度 PM2.5、可燃气体含 量、洁净区气压、悬 浮粒子含量、空调风 速 & 悬浮粒子计 数器 风速传感器 压差传感器 压缩空气流 量计 分析仪器 温度传感器 pH传感器 密度传感器 黏度传感器 电导率传感 器 压缩空气流 量计 冷凝水流量 计 蒸汽流量计 乙醇气体检 测报警器 温度计 湿度计 \\\\\n合格原料质量属性数据:重金属 残留量、有机农药残留量、酸不 溶性灰分、浸出物、二氧化硫 党参炔苷含量、原薯蓣皂苷含 量、三七皂苷 R1含量、人参皂 苷 Rb1 含量、人参皂苷 Rg1 含 量、人参皂苷 Rd含量、绿原酸 含量、新绿原酸含量、隐绿原酸 含量、异绿原酸 A含量、总糖含 量、指纹图谱相似度、杂质、水 分、总灰分、酸不溶性灰分、浸 出物、炽灼残渣 & 浸膏质量属性数据:党参炔苷含量 原薯蓣皂苷含量、三七皂苷 R1含量 人参皂苷 Rb1 含量、人参皂苷 Rg1 含量、人参皂苷 Rd含量、绿原酸含 量、新绿原酸含量、隐绿原酸含量 异绿原酸 A含量、总糖含量、重金属 含量 & 环境监测数据:温 度、湿度、光照强度 PM2.5、可燃气体含 量、洁净区气压、悬 浮粒子含量、空调风 速 &  &  &  &  &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l | l | l | l | l | l | l}\n\\hline\nUnnamed: 0 & Unnamed: 1 & Unnamed: 2 & Unnamed: 3 功能 & 区 投料数据 & Unnamed: 4 出料数据 & Unnamed: 5 过程参数 & 设 检测装备 & Unnamed: 6 & 功能 & 投料数据 & 出料数据 & 过程参数 & 检测装备 \\\\\n\\hline\n & 块 & 备 &  &  &  &  &  &  &  &  &  &  &  \\\\\nE & 提 取 纯 化 & 提 取 纯 化 设 备 & 1. 录 入 合格原 料属性 2. 接 收 生产工 单并下 达生产 指令 3. 实时 采集区 块内环 境数 据,超 限报警 & 合格原料基础数据:批号、重量 产地、采收日期、性状、鉴别 & 浸膏基础数据:批号、体积、生产日 期 & 环境监测数据:温 度、湿度、光照强度 PM2.5、可燃气体含 量、洁净区气压、悬 浮粒子含量、空调风 速 & 悬浮粒子计 数器 风速传感器 压差传感器 压缩空气流 量计 分析仪器 温度传感器 pH 传感器 密度传感器 黏度传感器 电导率传感 器 压缩空气流 量计 冷凝水流量 计 蒸汽流量计 乙醇气体检 测报警器 温度计 湿度计 &  &  &  &  &  &  \\\\\n合格原料质量属性数据:重金属 残留量、有机农药残留量、酸不 溶性灰分、浸出物、二氧化硫、 党参炔苷含量、原薯蓣皂苷含 量、三七皂苷 R1 含量、人参皂 苷 Rb1 含量、人参皂苷 Rg1 含 量、人参皂苷 Rd 含量、绿原酸 含量、新绿原酸含量、隐绿原酸 含量、异绿原酸 A 含量、总糖含 量、指纹图谱相似度、杂质、水 分、总灰分、酸不溶性灰分、浸 出物、炽灼残渣 & 浸膏质量属性数据:党参炔苷含量、 原薯蓣皂苷含量、三七皂苷 R1 含量 人参皂苷 Rb1 含量、人参皂苷 Rg1 含量、人参皂苷 Rd 含量、绿原酸含 量、新绿原酸含量、隐绿原酸含量、 异绿原酸 A 含量、总糖含量、重金属 含量 & 环境监测数据:温 度、湿度、光照强度 PM2.5、可燃气体含 量、洁净区气压、悬 浮粒子含量、空调风 速 &  &  &  &  &  &  &  &  &  &  &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
     "source_pdf": "精益六西格玛补充方案.pdf",
     "page": 4
   },
   {
-    "id": "pdf_table_0003",
+    "id": "pdf_table_0013",
+    "caption": "PDF第4页表2",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n功能 \\\\\n\\hline\n功能 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 4
+  },
+  {
+    "id": "pdf_table_0014",
+    "caption": "PDF第4页表3",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n投料数据 \\\\\n\\hline\n投料数据 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 4
+  },
+  {
+    "id": "pdf_table_0015",
+    "caption": "PDF第4页表4",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n出料数据 \\\\\n\\hline\n出料数据 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 4
+  },
+  {
+    "id": "pdf_table_0016",
+    "caption": "PDF第4页表5",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n过程参数 \\\\\n\\hline\n过程参数 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 4
+  },
+  {
+    "id": "pdf_table_0017",
+    "caption": "PDF第4页表6",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n检测装备 \\\\\n\\hline\n检测装备 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 4
+  },
+  {
+    "id": "pdf_table_0018",
     "caption": "PDF第5页表1",
-    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l}\n\\hline\n序 号 & 区 块 & 设 备 & 功能 & 投料数据 & 出料数据 & 过程参数 & 检测装备 \\\\\n\\hline\nC & 制 剂 & 制 剂 设 备 & 1. 录 入 稳心颗 粒原料 药、剂 型成品 属性 2. 接 收 生产工 单并下 达生产 指令 3. 实时 采集区 块内环 境数 据,超 限报警 & 稳心颗粒原料药基础数据:批 号、产量、生产日期 稳心颗粒原料药质量数据:无 & 稳心颗粒制剂基础数据:批号、重量 生产日期、性状、鉴别、重量差异 稳心颗粒制剂质量数据:党参炔苷含 量、原薯蓣皂苷含量、三七皂苷 R1 含量、人参皂苷 Rb1含量、人参皂苷 Rg1含量、人参皂苷 Rd含量、绿原 酸含量、新绿原酸含量、隐绿原酸含 量、异绿原酸 A含量、总糖含量、指 纹图谱相似度、重金属含量、农药残 留、黄曲霉毒素总量、微生物、溶出 度、粒度 & 环境监测数据:温 度、湿度、光照强度 PM2.5、可燃气体含 量、洁净区气压、悬 浮粒子含量、空调风 速 & 悬浮粒子计 数器 风速传感器 压差传感器 压缩空气流 量计 分析仪器 温度传感器 压缩空气流 量计 水分测定仪 器 粒度测定仪 器 温度计 湿度计 \\\\\nB & 包 装 & 包 装 设 备 & 1. 接 收 生产工 单并下 达生产 指令 2. 实时 & 稳心颗粒剂型基础数据:批号 重量、生产日期 & 稳心颗粒成品基础数据:批号、产量 生产日期 & 环境监测数据:温 度、湿度、光照强度 PM2.5、可燃气体含 量、洁净区气压、悬 浮粒子含量、空调风 速 & 悬浮粒子计 数器 风速传感器 压差传感器 压缩空气流 量计 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l | l | l | l | l | l | l}\n\\hline\nUnnamed: 0 & Unnamed: 1 & Unnamed: 2 & Unnamed: 3 功能 & 区 投料数据 & Unnamed: 4 出料数据 & Unnamed: 5 过程参数 & 设 检测装备 & Unnamed: 6 & 功能 & 投料数据 & 出料数据 & 过程参数 & 检测装备 \\\\\n\\hline\n & 块 & 备 &  &  &  &  &  &  &  &  &  &  &  \\\\\nC & 制 剂 & 制 剂 设 备 & 1. 录 入 稳心颗 粒原料 药、剂 型成品 属性 2. 接 收 生产工 单并下 达生产 指令 3. 实时 采集区 块内环 境数 据,超 限报警 & 稳心颗粒原料药基础数据:批 号、产量、生产日期 稳心颗粒原料药质量数据:无 & 稳心颗粒制剂基础数据:批号、重量 生产日期、性状、鉴别、重量差异 稳心颗粒制剂质量数据:党参炔苷含 量、原薯蓣皂苷含量、三七皂苷 R1 含量、人参皂苷 Rb1 含量、人参皂苷 Rg1 含量、人参皂苷 Rd 含量、绿原 酸含量、新绿原酸含量、隐绿原酸含 量、异绿原酸 A 含量、总糖含量、指 纹图谱相似度、重金属含量、农药残 留、黄曲霉毒素总量、微生物、溶出 度、粒度 & 环境监测数据:温 度、湿度、光照强度 PM2.5、可燃气体含 量、洁净区气压、悬 浮粒子含量、空调风 速 & 悬浮粒子计 数器 风速传感器 压差传感器 压缩空气流 量计 分析仪器 温度传感器 压缩空气流 量计 水分测定仪 器 粒度测定仪 器 温度计 湿度计 &  &  &  &  &  &  \\\\\nB & 包 装 & 包 装 设 备 & 1. 接 收 生产工 单并下 达生产 指令 2. 实时 & 稳心颗粒剂型基础数据:批号、 重量、生产日期 & 稳心颗粒成品基础数据:批号、产量 生产日期 & 环境监测数据:温 度、湿度、光照强度 PM2.5、可燃气体含 量、洁净区气压、悬 浮粒子含量、空调风 速 & 悬浮粒子计 数器 风速传感器 压差传感器 压缩空气流 量计 &  &  &  &  &  &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
     "source_pdf": "精益六西格玛补充方案.pdf",
     "page": 5
   },
   {
-    "id": "pdf_table_0004",
+    "id": "pdf_table_0019",
+    "caption": "PDF第5页表2",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n功能 \\\\\n\\hline\n功能 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 5
+  },
+  {
+    "id": "pdf_table_0020",
+    "caption": "PDF第5页表3",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n投料数据 \\\\\n\\hline\n投料数据 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 5
+  },
+  {
+    "id": "pdf_table_0021",
+    "caption": "PDF第5页表4",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n出料数据 \\\\\n\\hline\n出料数据 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 5
+  },
+  {
+    "id": "pdf_table_0022",
+    "caption": "PDF第5页表5",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n过程参数 \\\\\n\\hline\n过程参数 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 5
+  },
+  {
+    "id": "pdf_table_0023",
+    "caption": "PDF第5页表6",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n检测装备 \\\\\n\\hline\n检测装备 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 5
+  },
+  {
+    "id": "pdf_table_0024",
     "caption": "PDF第6页表1",
-    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l}\n\\hline\n序 号 & 区 块 & 设 备 & 功能 采集区 块内环 境数 据,超 限报警 & 投料数据 稳心颗粒剂型质量属性数据:党 参炔苷含量、原薯蓣皂苷含量 三七皂苷R1含量、人参皂苷Rb1 含量、人参皂苷 Rg1含量、人参 皂苷 Rd含量、绿原酸含量、新 绿原酸含量、隐绿原酸含量、异 绿原酸 A含量、总糖含量、指纹 图谱相似度、黄曲霉毒素总量 微生物、溶出度、粒度 & 出料数据 稳心颗粒原料药质量数据:无 & 过程参数 环境监测数据:温 度、湿度、光照强度 PM2.5、可燃气体含 量、洁净区气压、悬 浮粒子含量、空调风 速 & 检测装备 温度计 湿度计 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l | l | l | l | l | l | l}\n\\hline\nUnnamed: 0 & Unnamed: 1 & Unnamed: 2 & Unnamed: 3 功能 & 区 投料数据 & Unnamed: 4 出料数据 & Unnamed: 5 过程参数 & 设 检测装备 & Unnamed: 6 & 功能 & 投料数据 & 出料数据 & 过程参数 & 检测装备 \\\\\n\\hline\n & 块 & 备 & 采集区 块内环 境数 据,超 限报警 & 稳心颗粒剂型质量属性数据:党 参炔苷含量、原薯蓣皂苷含量、 三七皂苷 R1 含量、人参皂苷 Rb1 含量、人参皂苷 Rg1 含量、人参 皂苷 Rd 含量、绿原酸含量、新 绿原酸含量、隐绿原酸含量、异 绿原酸 A 含量、总糖含量、指纹 图谱相似度、黄曲霉毒素总量、 微生物、溶出度、粒度 & 稳心颗粒原料药质量数据:无 & 环境监测数据:温 度、湿度、光照强度 PM2.5、可燃气体含 量、洁净区气压、悬 浮粒子含量、空调风 速 & 温度计 湿度计 &  &  &  &  &  &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
     "source_pdf": "精益六西格玛补充方案.pdf",
     "page": 6
   },
   {
-    "id": "pdf_table_0005",
+    "id": "pdf_table_0025",
+    "caption": "PDF第6页表2",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n功能 \\\\\n\\hline\n功能 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 6
+  },
+  {
+    "id": "pdf_table_0026",
+    "caption": "PDF第6页表3",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n投料数据 \\\\\n\\hline\n投料数据 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 6
+  },
+  {
+    "id": "pdf_table_0027",
+    "caption": "PDF第6页表4",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n出料数据 \\\\\n\\hline\n出料数据 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 6
+  },
+  {
+    "id": "pdf_table_0028",
+    "caption": "PDF第6页表5",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n过程参数 \\\\\n\\hline\n过程参数 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 6
+  },
+  {
+    "id": "pdf_table_0029",
+    "caption": "PDF第6页表6",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n检测装备 \\\\\n\\hline\n检测装备 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 6
+  },
+  {
+    "id": "pdf_table_0030",
+    "caption": "PDF第6页表7",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n参、黄精 \\\\\n\\hline\n松物料属性 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 6
+  },
+  {
+    "id": "pdf_table_0031",
+    "caption": "PDF第6页表8",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l}\n\\hline\n称重1 P3 & Unnamed: 0 \\\\\n\\hline\n & 七、琥 \\\\\n & 重量 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 6
+  },
+  {
+    "id": "pdf_table_0032",
+    "caption": "PDF第6页表10",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n三七粉 \\\\\n\\hline\n琥珀粉粒 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 6
+  },
+  {
+    "id": "pdf_table_0033",
+    "caption": "PDF第6页表12",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n三七粉 \\\\\n\\hline\n琥珀粉重 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 6
+  },
+  {
+    "id": "pdf_table_0034",
     "caption": "PDF第7页表1",
-    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l}\n\\hline\n序 号 & 单 元 & 设 备 & 功能 & 投料数据 & 出料数据 & 过程参数 & 指令 \\\\\n\\hline\nP3 & 称 重 & 电 子 秤 & 1.接收电子 秤 开 / 关 指 令; 2.执行原料 称重 & 基础数据:党参、黄 精、三七、琥珀、甘 松需求量 质量属性数据:党 参、黄精、三七、琥 珀、甘松性状、微生 物浓度 & 基础数据:投料量 质量属性数据:无 & 设备状态参数:设备自检数据、电子秤自 检状态 过程物料属性:无 人员相关数据:操作人员基本信息、签到 数据、操作记录基本信息、签到数据、操 作记录 & 操作指令:电子秤 开、电子秤关 工艺参数:无 \\\\\nP4 & 粉 碎 & 粉 碎 机 & 1.接收启 /停 指令; 2.执行三七 & 基础数据:三七、琥 珀重量 & 基础数据:三七粗 粉、琥珀细粉重量 & 设备状态参数:粉碎机自检状态参数 & 操作指令:粉碎机 启动、粉碎机停止 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l | l | l | l | l | l | l}\n\\hline\nUnnamed: 0 & Unnamed: 1 & Unnamed: 2 & Unnamed: 3 功能 & 单 投料数据 & Unnamed: 4 出料数据 & Unnamed: 5 过程参数 & 设 指令 & Unnamed: 6 & 功能 & 投料数据 & 出料数据 & 过程参数 & 指令 \\\\\n\\hline\n & 元 & 备 &  &  &  &  &  &  &  &  &  &  &  \\\\\nP3 & 称 重 & 电 子 秤 & 1. 接收电子 秤 开 / 关 指 令; 2. 执行原料 称重 & 基础数据:党参、黄 精、三七、琥珀、甘 松需求量 质量属性数据:党 参、黄精、三七、琥 珀、甘松性状、微生 物浓度 & 基础数据:投料量 质量属性数据:无 人员相关数据:操作人员基本信息、签到 数据、操作记录基本信息、签到数据、操 作记录 & 设备状态参数:设备自检数据、电子秤自 检状态 过程物料属性:无 工艺参数:无 & 操作指令:电子秤 开、电子秤关 &  &  &  &  &  &  \\\\\nP4 & 粉 碎 & 粉 碎 机 & 1.接收启 /停 指令; 2.执行三七、 & 基础数据:三七、琥 珀重量 & 基础数据:三七粗 粉、琥珀细粉重量 & 设备状态参数:粉碎机自检状态参数 & 操作指令:粉碎机 启动、粉碎机停止 &  &  &  &  &  &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
     "source_pdf": "精益六西格玛补充方案.pdf",
     "page": 7
   },
   {
-    "id": "pdf_table_0006",
+    "id": "pdf_table_0035",
+    "caption": "PDF第7页表2",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n功能 \\\\\n\\hline\n功能 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 7
+  },
+  {
+    "id": "pdf_table_0036",
+    "caption": "PDF第7页表3",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n投料数据 \\\\\n\\hline\n投料数据 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 7
+  },
+  {
+    "id": "pdf_table_0037",
+    "caption": "PDF第7页表4",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n出料数据 \\\\\n\\hline\n出料数据 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 7
+  },
+  {
+    "id": "pdf_table_0038",
+    "caption": "PDF第7页表5",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n过程参数 \\\\\n\\hline\n过程参数 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 7
+  },
+  {
+    "id": "pdf_table_0039",
+    "caption": "PDF第7页表6",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n指令 \\\\\n\\hline\n指令 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 7
+  },
+  {
+    "id": "pdf_table_0040",
     "caption": "PDF第8页表1",
-    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l}\n\\hline\n序 号 & 单 元 & 设 备 & 功能 琥珀粉碎 & 投料数据 质量属性数据:无 & 出料数据 质量属性数据:三 七粗粉、琥珀细粉 粒度 & 过程参数 过程物料属性:三七、琥珀粒度 人员相关数据:操作人员基本信息、签到 数据、操作记录基本信息、签到数据、操 作记录 & 指令 工艺参数:无 \\\\\n\\hline\nP5 & 称 重 2 & 电 子 秤 & 1.接收电子 秤 开 / 关 指 令; 2.执行三七 粗粉、琥珀细 粉称重 & 基础数据:三七粗 粉、琥珀细粉需求 量 & 基础数据:投料量 & 设备状态参数:设备自检数据、电子秤自 检状态 & 操作指令:电子秤 开、电子秤关 \\\\\n质量属性数据:三 & 质量属性数据:无 & 过程物料属性:无 &  &  &  &  &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l | l | l | l | l | l | l}\n\\hline\nUnnamed: 0 & Unnamed: 1 & Unnamed: 2 & Unnamed: 3 功能 & 单 投料数据 & Unnamed: 4 出料数据 & Unnamed: 5 过程参数 & 设 指令 & Unnamed: 6 & 功能 & 投料数据 & 出料数据 & 过程参数 & 指令 \\\\\n\\hline\n & 元 & 备 & 琥珀粉碎 & 质量属性数据:无 & 质量属性数据:三 七粗粉、琥珀细粉 粒度 人员相关数据:操作人员基本信息、签到 数据、操作记录基本信息、签到数据、操 作记录 & 过程物料属性:三七、琥珀粒度 & 工艺参数:无 &  &  &  &  &  &  \\\\\nP5 & 称 重 2 & 电 子 秤 & 1. 接收电子 秤 开 / 关 指 令; 2. 执行三七 粗粉、琥珀细 粉称重 & 基础数据:三七粗 粉、琥珀细粉需求 量 & 基础数据:投料量 & 设备状态参数:设备自检数据、电子秤自 检状态 & 操作指令:电子秤 开、电子秤关 &  &  &  &  &  &  \\\\\n质量属性数据:三 & 质量属性数据:无 & 过程物料属性:无 &  &  &  &  &  &  &  &  &  &  &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
     "source_pdf": "精益六西格玛补充方案.pdf",
     "page": 8
   },
   {
-    "id": "pdf_table_0007",
+    "id": "pdf_table_0041",
+    "caption": "PDF第8页表2",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n功能 \\\\\n\\hline\n功能 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 8
+  },
+  {
+    "id": "pdf_table_0042",
+    "caption": "PDF第8页表3",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n投料数据 \\\\\n\\hline\n投料数据 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 8
+  },
+  {
+    "id": "pdf_table_0043",
+    "caption": "PDF第8页表4",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n出料数据 \\\\\n\\hline\n出料数据 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 8
+  },
+  {
+    "id": "pdf_table_0044",
+    "caption": "PDF第8页表5",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n过程参数 \\\\\n\\hline\n过程参数 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 8
+  },
+  {
+    "id": "pdf_table_0045",
+    "caption": "PDF第8页表6",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n指令 \\\\\n\\hline\n指令 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 8
+  },
+  {
+    "id": "pdf_table_0046",
     "caption": "PDF第9页表1",
-    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l}\n\\hline\n序 号 & 单 元 & 设 备 & 功能 & 投料数据 七粗粉、琥珀细粉 粒度 & 出料数据 & 过程参数 人员相关数据:操作人员基本信息、签到 数据、操作记录基本信息、签到数据、操 作记录 & 指令 工艺参数:无 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l | l | l | l | l | l | l}\n\\hline\nUnnamed: 0 & Unnamed: 1 & Unnamed: 2 & Unnamed: 3 功能 & 单 投料数据 & Unnamed: 4 出料数据 & Unnamed: 5 过程参数 & 设 指令 & Unnamed: 6 & 功能 & 投料数据 & 出料数据 & 过程参数 & 指令 \\\\\n\\hline\n & 元 & 备 &  & 七粗粉、琥珀细粉 粒度 &  & 人员相关数据:操作人员基本信息、签到 数据、操作记录基本信息、签到数据、操 作记录 & 工艺参数:无 &  &  &  &  &  &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
     "source_pdf": "精益六西格玛补充方案.pdf",
     "page": 9
   },
   {
-    "id": "pdf_table_0008",
+    "id": "pdf_table_0047",
+    "caption": "PDF第9页表2",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n功能 \\\\\n\\hline\n功能 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 9
+  },
+  {
+    "id": "pdf_table_0048",
+    "caption": "PDF第9页表3",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n投料数据 \\\\\n\\hline\n投料数据 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 9
+  },
+  {
+    "id": "pdf_table_0049",
+    "caption": "PDF第9页表4",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n出料数据 \\\\\n\\hline\n出料数据 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 9
+  },
+  {
+    "id": "pdf_table_0050",
+    "caption": "PDF第9页表5",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n过程参数 \\\\\n\\hline\n过程参数 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 9
+  },
+  {
+    "id": "pdf_table_0051",
+    "caption": "PDF第9页表6",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n指令 \\\\\n\\hline\n指令 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 9
+  },
+  {
+    "id": "pdf_table_0052",
+    "caption": "PDF第10页表1",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 10
+  },
+  {
+    "id": "pdf_table_0053",
+    "caption": "PDF第10页表4",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 10
+  },
+  {
+    "id": "pdf_table_0054",
+    "caption": "PDF第10页表9",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 10
+  },
+  {
+    "id": "pdf_table_0055",
+    "caption": "PDF第10页表10",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l}\n\\hline\n浓缩1 E17 & Unnamed: 0 \\\\\n\\hline\n收 &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 10
+  },
+  {
+    "id": "pdf_table_0056",
+    "caption": "PDF第10页表11",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 10
+  },
+  {
+    "id": "pdf_table_0057",
+    "caption": "PDF第10页表13",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 10
+  },
+  {
+    "id": "pdf_table_0058",
+    "caption": "PDF第10页表14",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l}\n\\hline\n过滤2 E07 & Unnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 10
+  },
+  {
+    "id": "pdf_table_0059",
+    "caption": "PDF第10页表16",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 10
+  },
+  {
+    "id": "pdf_table_0060",
+    "caption": "PDF第10页表18",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 10
+  },
+  {
+    "id": "pdf_table_0061",
+    "caption": "PDF第10页表20",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l}\n\\hline\n投料 E03 & Unnamed: 0 \\\\\n\\hline\n称重 &  \\\\\n原料 &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 10
+  },
+  {
+    "id": "pdf_table_0062",
+    "caption": "PDF第10页表22",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 10
+  },
+  {
+    "id": "pdf_table_0063",
+    "caption": "PDF第10页表24",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l}\n\\hline\n合并提取液 E16 & Unnamed: 0 & Unnamed: 1 & Unnamed: 2 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 10
+  },
+  {
+    "id": "pdf_table_0064",
+    "caption": "PDF第10页表25",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 10
+  },
+  {
+    "id": "pdf_table_0065",
+    "caption": "PDF第10页表28",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l}\n\\hline\n过滤7 E20 & Unnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 10
+  },
+  {
+    "id": "pdf_table_0066",
+    "caption": "PDF第10页表29",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l}\n\\hline\n浓缩3 E21 & Unnamed: 0 \\\\\n\\hline\n回收 &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 10
+  },
+  {
+    "id": "pdf_table_0067",
+    "caption": "PDF第10页表31",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l}\n\\hline\n水提3 E12 & Unnamed: 0 & Unnamed: 1 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 10
+  },
+  {
+    "id": "pdf_table_0068",
+    "caption": "PDF第10页表32",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 10
+  },
+  {
+    "id": "pdf_table_0069",
+    "caption": "PDF第10页表33",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l}\n\\hline\n过滤5 E13 & Unnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 10
+  },
+  {
+    "id": "pdf_table_0070",
     "caption": "PDF第11页表1",
-    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l}\n\\hline\n序号 & 单元 & 设备 & 功能 & 投料数据 & 出料数据 & 过程参数 & 指令 \\\\\n\\hline\nE04 & 醇提 & 多 功 能 提 取罐 / 提 取 液 储 罐 & 1. 接 收 阀门开 / 闭指令; 2. 接 收 搅 拌 电 机启 /停 指令; 3. 接 收 泵启 /停 指令 4. 接 收 设 定 的 工 艺 参 数; 5. 执 行 回 流 提 取 单 元 工艺 & 基础数据:三七 重量、80%乙醇 加入量、批号 生产日期 三七质量属性 数据:无 & 基础数据:提 取液体积、药 渣重量、批号 生产日期 提取液质量属 性数据:pH 人员相关数据:操作人 员基本信息、签到数 据、操作记录基本信 息、签到数据、操作记 录 & 设备状态参数:蒸汽阀 门开度、搅拌转速、回 流状态、液位、温度 蒸汽压力 过程物料属性:温度 pH、电导率、光谱数据 工艺参数: 三七投料量、80%乙醇加入量、浸 泡时长、提取次数 & 操作指令: 投料阀门开、投料阀门闭、进液阀 门开、进液阀门闭、出液阀门开 出液阀门闭、排渣阀门开、排渣阀 门闭、搅拌电机启、搅拌电机停 泵启、泵停、冷凝水阀门开、冷凝 水阀门闭、蒸汽阀门开度 \\\\\nE06、 E08、 E12、 E14 & 水提 & 多 功 能 提 取罐 / 提 取 & 1. 接收 阀门开 / 闭指令; 2. 接收 & 基础数据:党 参、甘松、黄精 三七药渣重量 水体积、批号 & 基础数据:提 取液体积、药 渣重量、批号 生产日期 & 设备状态参数:蒸汽阀 门开度、搅拌转速、回 流状态、液位、温度 蒸汽压力 & 操作指令: 投料阀门开、投料阀门闭、进液阀 门开、进液阀门闭、出液阀门开 出液阀门闭、排渣阀门开、排渣阀 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l}\n\\hline\nUnnamed: 0 & 号 & Unnamed: 1 & Unnamed: 2 & 单元 & Unnamed: 3 & Unnamed: 4 & 设备 & Unnamed: 5 & Unnamed: 6 & 功能 & Unnamed: 7 & Unnamed: 8 & 投料数据 & Unnamed: 9 & Unnamed: 10 & 出料数据 & Unnamed: 11 & Unnamed: 12 & 过程参数 & Unnamed: 13 & Unnamed: 14 & 指令 & Unnamed: 15 \\\\\n\\hline\nE04 & 醇提 & 多 功 能 提 取罐 / 提 取 液 储 罐 & 1. 接 收 阀门开 / 闭指令; 2. 接 收 搅 拌 电 机启 /停 指令; 3. 接 收 泵启 /停 指令 4. 接 收 设 定 的 工 艺 参 数; 5. 执 行 回 流 提 取 单 元 工艺 & 基础数据:三七 重量、80%乙醇 加入量、批号、 生产日期 三七质量属性 数据:无 & 基础数据:提 取液体积、药 渣重量、批号 生产日期 提取液质量属 性数据:pH & 设备状态参数:蒸汽阀 门开度、搅拌转速、回 流状态、液位、温度、 蒸汽压力 过程物料属性:温度、 pH、电导率、光谱数据 人员相关数据:操作人 员基本信息、签到数 据、操作记录基本信 息、签到数据、操作记 录 & 操作指令: 投料阀门开、投料阀门闭、进液阀 门开、进液阀门闭、出液阀门开、 出液阀门闭、排渣阀门开、排渣阀 门闭、搅拌电机启、搅拌电机停、 泵启、泵停、冷凝水阀门开、冷凝 水阀门闭、蒸汽阀门开度 工艺参数: 三七投料量、80%乙醇加入量、浸 泡时长、提取次数 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\nE06、 E08、 E12、 E14 & 水提 & 多 功 能 提 取罐 / 提 取 & 1. 接收 阀门开 / 闭指令; 2. 接收 & 基础数据:党 参、甘松、黄精 三七药渣重量、 水体积、批号、 & 基础数据:提 取液体积、药 渣重量、批号 生产日期 & 设备状态参数:蒸汽阀 门开度、搅拌转速、回 流状态、液位、温度、 蒸汽压力 & 操作指令: 投料阀门开、投料阀门闭、进液阀 门开、进液阀门闭、出液阀门开、 出液阀门闭、排渣阀门开、排渣阀 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
     "source_pdf": "精益六西格玛补充方案.pdf",
     "page": 11
   },
   {
-    "id": "pdf_table_0009",
+    "id": "pdf_table_0071",
     "caption": "PDF第12页表1",
-    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l}\n\\hline\nUnnamed: 0 & Unnamed: 1 & 液 储 罐 & 搅 拌 电 机启 /停 指令; 3. 接收 泵启 /停 指令 4. 接收 设 定 的 工 艺 参 数; 5. 执行 回 流 提 取 单 元 工艺 党参、甘松、黄 精、三七药渣质 量属性数据:无 & 生产日期 提取液质量属 性数据: pH & Unnamed: 2 过程物料属性:温度 pH、电导率、光谱数据 人员相关数据:操作人 员基本信息、签到数 据、操作记录基本信 息、签到数据、操作记 录 & Unnamed: 3 工艺参数: 党参、甘松、黄精、三七药渣投料 量、水加入量、浸泡时长、提取次 数 & 门闭、搅拌电机启、搅拌电机停 泵启、泵停、冷凝水阀门开、冷凝 水阀门闭、蒸汽阀门开度 \\\\\n\\hline\nE10 & 蒸馏 & 多 功 能 蒸 馏罐 / 提 取 液 储 罐 & 1. 接收 阀门开 / 闭指令; 2. 接收 搅 拌 电 机启 /停 指令; 3. 接收 泵启 /停 指令 4. 接收 & 基础数据:甘松 重量、水体积 批号、生产日期 & 基础数据:挥 发油体积、提 取液体积、药 渣重量、批号 生产日期 & 设备状态参数:蒸汽阀 门开度、搅拌转速、回 流状态、液位、温度 蒸汽压力 & 操作指令: 投料阀门开、投料阀门闭、进液阀 门开、进液阀门闭、出液阀门开 出液阀门闭、排渣阀门开、排渣阀 门闭、搅拌电机启、搅拌电机停 泵启、泵停、冷凝水阀门开、冷凝 水阀门闭、蒸汽阀门开度 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l}\n\\hline\nUnnamed: 0 & Unnamed: 1 & 液 储 罐 & 搅 拌 电 机启 /停 指令; 3. 接收 泵启 /停 指令 4. 接收 设 定 的 工 艺 参 数; 5. 执行 回 流 提 取 单 元 工艺 & 生产日期 党参、甘松、黄 精、三七药渣质 量属性数据:无 & Unnamed: 2 提取液质量属 性数据: pH 人员相关数据:操作人 员基本信息、签到数 据、操作记录基本信 息、签到数据、操作记 录 & Unnamed: 3 过程物料属性:温度、 pH、电导率、光谱数据 & 门闭、搅拌电机启、搅拌电机停、 泵启、泵停、冷凝水阀门开、冷凝 水阀门闭、蒸汽阀门开度 工艺参数: 党参、甘松、黄精、三七药渣投料 量、水加入量、浸泡时长、提取次 数 \\\\\n\\hline\nE10 & 蒸馏 & 多 功 能 蒸 馏罐 / 提 取 液 储 罐 & 1. 接收 阀门开 / 闭指令; 2. 接收 搅 拌 电 机启 /停 指令; 3. 接收 泵启 /停 指令 4. 接收 & 基础数据:甘松 重量、水体积、 批号、生产日期 & 基础数据:挥 发油体积、提 取液体积、药 渣重量、批号 生产日期 & 设备状态参数:蒸汽阀 门开度、搅拌转速、回 流状态、液位、温度、 蒸汽压力 & 操作指令: 投料阀门开、投料阀门闭、进液阀 门开、进液阀门闭、出液阀门开、 出液阀门闭、排渣阀门开、排渣阀 门闭、搅拌电机启、搅拌电机停、 泵启、泵停、冷凝水阀门开、冷凝 水阀门闭、蒸汽阀门开度 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
     "source_pdf": "精益六西格玛补充方案.pdf",
     "page": 12
   },
   {
-    "id": "pdf_table_0010",
+    "id": "pdf_table_0072",
     "caption": "PDF第13页表1",
-    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l}\n\\hline\nUnnamed: 0 & Unnamed: 1 & Unnamed: 2 & 设 定 的 工 艺 参 数; 5. 执行 回 流 提 取 单 元 工艺 甘松质量属性 数据:无 & Unnamed: 3 提取液质量属 性数据:pH 挥发油质量属 性数据:无 & Unnamed: 4 过程物料属性:温度 pH、电导率、光谱数据 & Unnamed: 5 工艺参数: 甘松加料量、水加入量、浸泡时长 提取次数 & Unnamed: 6 \\\\\n\\hline\nE05、 E07、 E09、 E11、 E13、 E15、 E20 & 过滤 & 板 框 过 滤 器 & 接 收 阀 门开 /闭 指令; 接 收 泵 启 /停指 令; 执 行 过 滤 单 元 工艺 质量属性数据 无 & 基础数据:重 量、批号、生产 日期 质 量 属 性 数 据:无 & 基础数据:滤 液体积、药渣 重量、批号、生 产日期 过程物料属性:无 人员相关数据:操作人 员基本信息、签到数 据、操作记录 & 设备状态参数:无 工艺参数: 无 & 操作指令: 进液阀门开、进液阀门闭、出液阀 门开、出液阀门闭、排渣阀门开 排渣阀门闭 \\\\\nE17、 E18、 E21 & 浓缩 & 双 效 蒸 发 器 & 接 收 阀 门开 /闭 指令; 接 收 蒸 汽 调 节 & 基础数据:药液 体积、批号、生 产日期 & 基础数据:浓 缩液体积、回 收乙醇体积、 批号、生产日 期 & 设备状态参数:一效真 空度、二效真空度、一 效蒸发室液位、二效蒸 发室液位、一效温度 二效温度、真空泵运行 & 操作指令: 进液阀门开、进液阀门闭、出液阀 门开、出液阀门闭、排渣阀门开 排渣阀门闭、真空泵启、真空泵停 蒸汽调节阀开度、放空阀开、放空 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l}\n\\hline\nUnnamed: 0 & Unnamed: 1 & Unnamed: 2 & 设 定 的 工 艺 参 数; 5. 执行 回 流 提 取 单 元 工艺 & Unnamed: 3 甘松质量属性 数据:无 & Unnamed: 4 提取液质量属 性数据:pH 挥发油质量属 性数据:无 & Unnamed: 5 过程物料属性:温度、 pH、电导率、光谱数据 & Unnamed: 6 工艺参数: 甘松加料量、水加入量、浸泡时长 提取次数 \\\\\n\\hline\nE05、 E07、 E09、 E11、 E13、 E15、 E20 & 过滤 & 板 框 过 滤 器 & 接 收 阀 门开 /闭 指令; 接 收 泵 启 /停指 令; 执 行 过 滤 单 元 工艺 & 基础数据:重 量、批号、生产 日期 质量属性数据: 无 & 基础数据:滤 液体积、药渣 重量、批号、生 产日期 质 量 属 性 数 据:无 & 设备状态参数:无 过程物料属性:无 人员相关数据:操作人 员基本信息、签到数 据、操作记录 & 操作指令: 进液阀门开、进液阀门闭、出液阀 门开、出液阀门闭、排渣阀门开、 排渣阀门闭 工艺参数: 无 \\\\\nE17、 E18、 E21 & 浓缩 & 双 效 蒸 发 器 & 接 收 阀 门开 /闭 指令; 接 收 蒸 汽 调 节 & 基础数据:药液 体积、批号、生 产日期 & 基础数据:浓 缩液体积、回 收乙醇体积、 批号、生产日 期 & 设备状态参数:一效真 空度、二效真空度、一 效蒸发室液位、二效蒸 发室液位、一效温度、 二效温度、真空泵运行 & 操作指令: 进液阀门开、进液阀门闭、出液阀 门开、出液阀门闭、排渣阀门开、 排渣阀门闭、真空泵启、真空泵停 蒸汽调节阀开度、放空阀开、放空 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
     "source_pdf": "精益六西格玛补充方案.pdf",
     "page": 13
   },
   {
-    "id": "pdf_table_0011",
+    "id": "pdf_table_0073",
     "caption": "PDF第14页表1",
-    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l}\n\\hline\nUnnamed: 0 & Unnamed: 1 & Unnamed: 2 & 阀 开 度 指令; 接 收 真 空泵启 / 停指令; 执 行 回 收 浓 缩 工艺 质量属性数据 药液乙醇含量 & Unnamed: 3 质 量 属 性 数 据:浓缩液乙 醇含量、回收 乙醇浓度、浓 缩液相对密度 & Unnamed: 4 过程物料属性:乙醇浓 度、相对密度、光谱数 据 人员相关数据:操作人 员基本信息、签到数 据、操作记录 & 状态 工艺参数: 目标相对密度、目标乙醇含量、目 标液位 & 阀闭 \\\\\n\\hline\nE19 & 醇沉 & 调 配 罐 & 接 收 阀 门开 /闭 指令; 接 收 搅 拌 电 机 启 /停指 令; 执 行 醇 沉 单 元 工艺 & 基础数据:浓缩 液体积、批号 生产日期 & 基础数据:药 液体积、批号 生产日期 & 设备状态参数:搅拌转 速 & 操作指令: 进液阀门开、进液阀门闭、出液阀 门开、出液阀门闭、排渣阀门开 排渣阀门闭、搅拌电机启、搅拌电 机停 \\\\\n质量属性数据 浓缩液乙醇浓 度、浓缩液相对 密度 & 质 量 属 性 数 据:药液乙醇 浓度 & 过程物料属性:pH、乙 醇浓度、相对密度、光 谱数据 &  &  &  &  &  \\\\\n人员相关数据:操作人 员基本信息、签到数 据、操作记录 & 工艺参数: 目标乙醇浓度、搅拌时长、静置时 长 &  &  &  &  &  &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l}\n\\hline\nUnnamed: 0 & Unnamed: 1 & Unnamed: 2 & 阀 开 度 指令; 接 收 真 空泵启 / 停指令; 执 行 回 收 浓 缩 工艺 & Unnamed: 3 质量属性数据: 药液乙醇含量 & Unnamed: 4 质 量 属 性 数 据:浓缩液乙 醇含量、回收 乙醇浓度、浓 缩液相对密度 & 状态 过程物料属性:乙醇浓 度、相对密度、光谱数 据 人员相关数据:操作人 员基本信息、签到数 据、操作记录 & 阀闭 工艺参数: 目标相对密度、目标乙醇含量、目 标液位 \\\\\n\\hline\nE19 & 醇沉 & 调 配 罐 & 接 收 阀 门开 /闭 指令; 接 收 搅 拌 电 机 启 /停指 令; 执 行 醇 沉 单 元 工艺 & 基础数据:浓缩 液体积、批号、 生产日期 & 基础数据:药 液体积、批号 生产日期 & 设备状态参数:搅拌转 速 & 操作指令: 进液阀门开、进液阀门闭、出液阀 门开、出液阀门闭、排渣阀门开、 排渣阀门闭、搅拌电机启、搅拌电 机停 \\\\\n质量属性数据: 浓缩液乙醇浓 度、浓缩液相对 密度 & 质 量 属 性 数 据:药液乙醇 浓度 & 过程物料属性:pH、乙 醇浓度、相对密度、光 谱数据 &  &  &  &  &  \\\\\n人员相关数据:操作人 员基本信息、签到数 据、操作记录 & 工艺参数: 目标乙醇浓度、搅拌时长、静置时 长 &  &  &  &  &  &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
     "source_pdf": "精益六西格玛补充方案.pdf",
     "page": 14
   },
   {
-    "id": "pdf_table_0012",
-    "caption": "PDF第15页表1",
-    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l}\n\\hline\n序号 & 单 元 & 设备 & 功能 & 投料数据 & 出料数据 & 过程参数 & 指令 \\\\\n\\hline\nC01 -C02 & 粉 碎 & 粉筛 机 & 1.执行粉筛 工艺 & 基础数据:糊精需求量、β-环 糊精需求量、阿司帕坦需求 & 基础数据:糊精粉末需求量 β-环糊精粉末需求量、阿司帕 & 设备参数状态:设备 自检数据 & 操作指令:设备 启、设备停 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "id": "pdf_table_0074",
+    "caption": "PDF第15页表3",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n糖、β-环糊 精、阿帕斯 \\\\\n\\hline\n坦、糊精 物料属性 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
     "source_pdf": "精益六西格玛补充方案.pdf",
     "page": 15
   },
   {
-    "id": "pdf_table_0013",
+    "id": "pdf_table_0075",
+    "caption": "PDF第15页表5",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n粉碎辅 \\\\\n\\hline\n物料属性 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 15
+  },
+  {
+    "id": "pdf_table_0076",
+    "caption": "PDF第15页表7",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n格辅料粉末 \\\\\n\\hline\n物料属性 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 15
+  },
+  {
+    "id": "pdf_table_0077",
+    "caption": "PDF第15页表9",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l}\n\\hline\n混合 C04 & Unnamed: 0 \\\\\n\\hline\n定量辅 &  \\\\\n物料属 &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 15
+  },
+  {
+    "id": "pdf_table_0078",
+    "caption": "PDF第15页表10",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l}\n\\hline\n制粒 C05 & Unnamed: 0 \\\\\n\\hline\n混合浸 &  \\\\\n物料属 &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 15
+  },
+  {
+    "id": "pdf_table_0079",
+    "caption": "PDF第15页表11",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n粗颗粒 \\\\\n\\hline\n物料属 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 15
+  },
+  {
+    "id": "pdf_table_0080",
+    "caption": "PDF第15页表13",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n已整颗 \\\\\n\\hline\n物料属 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 15
+  },
+  {
+    "id": "pdf_table_0081",
+    "caption": "PDF第15页表15",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n均匀颗 \\\\\n\\hline\n物料属 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 15
+  },
+  {
+    "id": "pdf_table_0082",
+    "caption": "PDF第15页表16",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l | l | l | l | l}\n\\hline\nUnnamed: 0 & Unnamed: 1 & Unnamed: 2 & Unnamed: 3 & 单 & Unnamed: 4 & 设备 & 功能 & 投料数据 & 出料数据 & 过程参数 & 指令 \\\\\n\\hline\n &  & 设备 & 功能 & 投料数据 & 出料数据 元 & 过程参数 & 指令 &  &  &  &  \\\\\nC01 - & 粉 碎 & 粉 筛 机 & 1.执行粉筛 工艺 & 基础数据:糊精需求量、β-环 糊精需求量、阿司帕坦需求 & 基础数据:糊精粉末需求量、 β-环糊精粉末需求量、阿司帕 & 设备参数状态:设备 自检数据 & 操作指令:设备 启、设备停 &  &  &  &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 15
+  },
+  {
+    "id": "pdf_table_0083",
+    "caption": "PDF第15页表17",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n设备 \\\\\n\\hline\n设备 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 15
+  },
+  {
+    "id": "pdf_table_0084",
+    "caption": "PDF第15页表18",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n功能 \\\\\n\\hline\n功能 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 15
+  },
+  {
+    "id": "pdf_table_0085",
+    "caption": "PDF第15页表19",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n投料数据 \\\\\n\\hline\n投料数据 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 15
+  },
+  {
+    "id": "pdf_table_0086",
+    "caption": "PDF第15页表20",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n出料数据 \\\\\n\\hline\n出料数据 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 15
+  },
+  {
+    "id": "pdf_table_0087",
+    "caption": "PDF第15页表21",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n过程参数 \\\\\n\\hline\n过程参数 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 15
+  },
+  {
+    "id": "pdf_table_0088",
+    "caption": "PDF第15页表22",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n指令 \\\\\n\\hline\n指令 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 15
+  },
+  {
+    "id": "pdf_table_0089",
     "caption": "PDF第16页表1",
-    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l}\n\\hline\n序号 & 单 元 & 设备 & 功能 & 投料数据 & 出料数据 & 过程参数 & 指令 \\\\\n\\hline\n & 过 筛 &  & 质量属性数据:无 & 量、糊精需求量 质量属性数据:物料粒度 & 坦粉末需求量、糊精粉末需求 量、粉末粒度 过程物料属性:物料 粒径 & 工艺参数:物料 粒度 人员相关数据:操作 人员基本信息、签到 数据、操作记录 &  \\\\\nC03 & 称 重 & 电子 秤 & 1.接收电子 秤 开 / 关 指 令; 2.执行辅料 称重 辅料质量属性数据:无 & 辅料基础数据:药材批号、产地、 采收日期 药材质量属性数据:无 & 药材基础数据:重量 过程物料属性:无 & 设备状态参数:电子秤 自检状态 工艺参数:目标 称重量 人员相关数据:操作人 员基本信息、签到数 据、操作记录基本信 息、签到数据、操作记 录 & 操作指令:电子 秤开、电子秤关 \\\\\nC04 & 混 合 & 混合 机 & 1.接收搅拌 机启 /停指 令; 2.接收阀门 开/闭指令 & 基础数据:浸膏量、琥珀细粉 量、辅料粉末量 & 基础数据:混合浸膏体积、批号、 生产日期 & 设备状态参数:搅拌 转速、设备自检数据 & 操作指令:进液 阀开、进液阀 闭、搅拌机开 搅拌机闭 \\\\\n挥发油、浸膏质量属性数据:无 & 质量属性数据:混合浸膏含水 & 过程物料属性:无 & 工艺参数:搅拌 &  &  &  &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l | l | l | l | l}\n\\hline\nUnnamed: 0 & Unnamed: 1 & Unnamed: 2 & Unnamed: 3 & 单 & Unnamed: 4 & 设备 & 功能 & 投料数据 & 出料数据 & 过程参数 & 指令 \\\\\n\\hline\n &  & 设备 & 功能 & 投料数据 & 出料数据 元 & 过程参数 & 指令 &  &  &  &  \\\\\nC02 & 过 筛 &  &  & 量、糊精需求量 质量属性数据:无 & 坦粉末需求量、糊精粉末需求 量、粉末粒度 质量属性数据:物料粒度 人员相关数据:操作 人员基本信息、签到 数据、操作记录 & 过程物料属性:物料 粒径 & 工艺参数:物料 粒度 &  &  &  &  \\\\\nC03 & 称 重 & 电 子 秤 & 1. 接收电子 秤 开 / 关 指 令; 2. 执行辅料 称重 & 辅料基础数据:药材批号、产地 采收日期 辅料质量属性数据:无 & 药材基础数据:重量 药材质量属性数据:无 人员相关数据:操作人 员基本信息、签到数 据、操作记录基本信 息、签到数据、操作记 录 & 设备状态参数:电子秤 自检状态 过程物料属性:无 & 操作指令:电子秤 开、电子秤关 工艺参数:目标称 重量 &  &  &  &  \\\\\nC04 & 混 合 & 混 合 机 & 1.接收搅拌 机启 /停指 令; 2.接收阀门 开/闭指令; & 基础数据:浸膏量、琥珀细粉 量、辅料粉末量 & 基础数据:混合浸膏体积、批号、 生产日期 & 设备状态参数:搅拌 转速、设备自检数据 & 操作指令:进液 阀开、进液阀 闭、搅拌机开、 搅拌机闭 &  &  &  &  \\\\\n挥发油、浸膏质量属性数据:无 & 质量属性数据:混合浸膏含水 & 过程物料属性:无 & 工艺参数:搅拌 &  &  &  &  &  &  &  &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
     "source_pdf": "精益六西格玛补充方案.pdf",
     "page": 16
   },
   {
-    "id": "pdf_table_0014",
+    "id": "pdf_table_0090",
+    "caption": "PDF第16页表2",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n设备 \\\\\n\\hline\n设备 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 16
+  },
+  {
+    "id": "pdf_table_0091",
+    "caption": "PDF第16页表3",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n功能 \\\\\n\\hline\n功能 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 16
+  },
+  {
+    "id": "pdf_table_0092",
+    "caption": "PDF第16页表4",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n投料数据 \\\\\n\\hline\n投料数据 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 16
+  },
+  {
+    "id": "pdf_table_0093",
+    "caption": "PDF第16页表5",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n出料数据 \\\\\n\\hline\n出料数据 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 16
+  },
+  {
+    "id": "pdf_table_0094",
+    "caption": "PDF第16页表6",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n过程参数 \\\\\n\\hline\n过程参数 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 16
+  },
+  {
+    "id": "pdf_table_0095",
+    "caption": "PDF第16页表7",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n指令 \\\\\n\\hline\n指令 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 16
+  },
+  {
+    "id": "pdf_table_0096",
     "caption": "PDF第17页表1",
-    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l}\n\\hline\n序号 & 单 元 & 设备 & 功能 3.执行制软 材工艺 & 投料数据 & 出料数据 量、软材均匀度 & 过程参数 人员相关数据:操作 人员基本信息、签到 数据、操作记录 & 指令 机转速、搅拌时 间、70%进液乙 醇流量 \\\\\n\\hline\nC05 & 制 粒 & 流 化 床 制 粒机 & 1. 接受阀 门开 /关指 令 2. 接受泵 开/关指令 3. 加热开/ 停指令 4. 进料/出 料指令 5. 混合辅 料 6. 喷雾制 粒 7. 干燥颗 粒 质量属性数据:软材含水量 软材均匀度 & 甘松挥发油、混合浸膏基础数 据:体积、批号、生产日期 颗粒质量属性数据:温度、微生物 限度、含量均匀度、水分、粒度、 溶出度、干燥失重 & 颗粒基础数据:颗粒总重、批号、 生产日期 过程物料属性:颗粒 粒径、含水量 & 设备状态参数:温度、 风速、压缩空气雾化压 力、蠕动泵流量、加热 时间 工艺参数:目标 颗粒水分、目标 颗粒粒度 人员相关数据:操作 人员基本信息、签到 数据、操作记录 & 操作指令:设备 启、设备停 \\\\\nC06 & 整 粒 & 整粒 机 & 1. 接收整粒 机 开 / 关 指 令; 2. 执行整 粒工艺 & 基础数据:颗粒重量、批号、 生产日期 & 基础数据:颗粒重量、批号、生 产日期 & 设备状态参数:设备 自检数据 & 操作指令:设备 启、设备停 \\\\\n质量属性数据:颗粒均匀性 颗粒含水量、粒径、温度、溶 出度、干燥失重 & 质量属性数据:颗粒均匀性 颗粒含水量、粒径、温度、溶 出度、干燥失重 & 过程物料属性:无 & 工艺参数:无 & 人员相关数据:操作 人员基本信息、签到 &  &  &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l | l | l | l | l}\n\\hline\nUnnamed: 0 & Unnamed: 1 & Unnamed: 2 & Unnamed: 3 & 单 & Unnamed: 4 & 设备 & 功能 & 投料数据 & 出料数据 & 过程参数 & 指令 \\\\\n\\hline\n &  & 设备 & 功能 3.执行制软 材工艺 & 投料数据 & 出料数据 元 量、软材均匀度 & 过程参数 人员相关数据:操作 人员基本信息、签到 数据、操作记录 & 指令 机转速、搅拌时 间、70%进液乙 醇流量 &  &  &  &  \\\\\nC05 & 制 粒 & 流 化 床 制 粒机 & 1. 接受阀 门开 /关指 令 2. 接受泵 开/关指令 3. 加热开/ 停指令 4. 进料/出 料指令 5. 混合辅 料 6. 喷雾制 粒 7. 干燥颗 粒 & 甘松挥发油、混合浸膏基础数 据:体积、批号、生产日期 质量属性数据:软材含水量 软材均匀度 & 颗粒基础数据:颗粒总重、批号、 生产日期 颗粒质量属性数据:温度、微生物 限度、含量均匀度、水分、粒度、 溶出度、干燥失重 & 设备状态参数:温度、 风速、压缩空气雾化压 力、蠕动泵流量、加热 时间 过程物料属性:颗粒 粒径、含水量 人员相关数据:操作 人员基本信息、签到 数据、操作记录 & 操作指令:设备 启、设备停 工艺参数:目标 颗粒水分、目标颗 粒粒度 &  &  &  &  \\\\\nC06 & 整 粒 & 整 粒 机 & 1. 接收整粒 机 开 / 关 指 令; 2. 执行整 粒工艺 & 基础数据:颗粒重量、批号、 生产日期 & 基础数据:颗粒重量、批号、生 产日期 & 设备状态参数:设备 自检数据 & 操作指令:设备 启、设备停 &  &  &  &  \\\\\n质量属性数据:颗粒均匀性 颗粒含水量、粒径、温度、溶 出度、干燥失重 & 质量属性数据:颗粒均匀性、 颗粒含水量、粒径、温度、溶 出度、干燥失重 & 过程物料属性:无 & 工艺参数:无 & 人员相关数据:操作 人员基本信息、签到 &  &  &  &  &  &  &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
     "source_pdf": "精益六西格玛补充方案.pdf",
     "page": 17
   },
   {
-    "id": "pdf_table_0015",
+    "id": "pdf_table_0097",
+    "caption": "PDF第17页表2",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n设备 \\\\\n\\hline\n设备 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 17
+  },
+  {
+    "id": "pdf_table_0098",
+    "caption": "PDF第17页表3",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n功能 \\\\\n\\hline\n功能 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 17
+  },
+  {
+    "id": "pdf_table_0099",
+    "caption": "PDF第17页表4",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n投料数据 \\\\\n\\hline\n投料数据 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 17
+  },
+  {
+    "id": "pdf_table_0100",
+    "caption": "PDF第17页表5",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n出料数据 \\\\\n\\hline\n出料数据 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 17
+  },
+  {
+    "id": "pdf_table_0101",
+    "caption": "PDF第17页表6",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n过程参数 \\\\\n\\hline\n过程参数 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 17
+  },
+  {
+    "id": "pdf_table_0102",
+    "caption": "PDF第17页表7",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n指令 \\\\\n\\hline\n指令 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 17
+  },
+  {
+    "id": "pdf_table_0103",
     "caption": "PDF第18页表1",
-    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l}\n\\hline\n序号 & 单 元 & 设备 & 功能 & 投料数据 & 出料数据 & 过程参数 数据、操作记录 & 指令 \\\\\n\\hline\nC07 & 总 混 & 多向 运动 混合 机 & 1. 接收多 向 运 动 混 合机开 /关 指令; 2. 执行总 混工艺 & 基础数据:颗粒重量 & 基础数据:颗粒重量 & 设备状态参数:设备 自检数据 & 操作指令:设备 启、设备停 \\\\\n质量属性数据:颗粒均匀性 颗粒含水量、粒径、温度、溶 出度、干燥失重 & 质量属性数据:颗粒均匀性 颗粒含水量、粒径、温度、溶 出度、干燥失重、含水量、党 参炔苷含量、原薯蓣皂苷含量、三 七皂苷 R1含量、人参皂苷 Rb1含 量、人参皂苷 Rg1含量、人参皂苷 Rd含量、绿原酸含量、新绿原酸含 量、隐绿原酸含量、异绿原酸 A含 量、总糖含量、指纹图谱相似度、 黄曲霉毒素总量、重金属含量 & 过程物料属性:无 & 工艺参数:混合 时间、物料均匀 度、混合转速 & 人员相关数据:操作 人员基本信息、签到 数据、操作记录 &  &  &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l | l | l | l | l}\n\\hline\nUnnamed: 0 & Unnamed: 1 & Unnamed: 2 & Unnamed: 3 & 单 & Unnamed: 4 & 设备 & 功能 & 投料数据 & 出料数据 & 过程参数 & 指令 \\\\\n\\hline\n &  & 设备 & 功能 & 投料数据 & 出料数据 元 & 过程参数 数据、操作记录 & 指令 &  &  &  &  \\\\\nC07 & 总 混 & 多 向 运 动 混 合 机 & 1. 接收多 向 运 动 混 合机开 /关 指令; 2. 执行总 混工艺 & 基础数据:颗粒重量 & 基础数据:颗粒重量 & 设备状态参数:设备 自检数据 & 操作指令:设备 启、设备停 &  &  &  &  \\\\\n质量属性数据:颗粒均匀性 颗粒含水量、粒径、温度、溶 出度、干燥失重 & 质量属性数据:颗粒均匀性、 颗粒含水量、粒径、温度、溶 出度、干燥失重、含水量、党 参炔苷含量、原薯蓣皂苷含量、三 七皂苷 R1 含量、人参皂苷 Rb1 含 量、人参皂苷 Rg1 含量、人参皂苷 Rd 含量、绿原酸含量、新绿原酸含 量、隐绿原酸含量、异绿原酸 A 含 量、总糖含量、指纹图谱相似度、 黄曲霉毒素总量、重金属含量 & 过程物料属性:无 & 工艺参数:混合 时间、物料均匀 度、混合转速 & 人员相关数据:操作 人员基本信息、签到 数据、操作记录 &  &  &  &  &  &  &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
     "source_pdf": "精益六西格玛补充方案.pdf",
     "page": 18
   },
   {
-    "id": "pdf_table_0016",
+    "id": "pdf_table_0104",
+    "caption": "PDF第18页表2",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n设备 \\\\\n\\hline\n设备 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 18
+  },
+  {
+    "id": "pdf_table_0105",
+    "caption": "PDF第18页表3",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n功能 \\\\\n\\hline\n功能 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 18
+  },
+  {
+    "id": "pdf_table_0106",
+    "caption": "PDF第18页表4",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n投料数据 \\\\\n\\hline\n投料数据 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 18
+  },
+  {
+    "id": "pdf_table_0107",
+    "caption": "PDF第18页表5",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n出料数据 \\\\\n\\hline\n出料数据 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 18
+  },
+  {
+    "id": "pdf_table_0108",
+    "caption": "PDF第18页表6",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n过程参数 \\\\\n\\hline\n过程参数 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 18
+  },
+  {
+    "id": "pdf_table_0109",
+    "caption": "PDF第18页表7",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n指令 \\\\\n\\hline\n指令 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 18
+  },
+  {
+    "id": "pdf_table_0110",
+    "caption": "PDF第19页表1",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 19
+  },
+  {
+    "id": "pdf_table_0111",
+    "caption": "PDF第19页表3",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 19
+  },
+  {
+    "id": "pdf_table_0112",
+    "caption": "PDF第19页表5",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 19
+  },
+  {
+    "id": "pdf_table_0113",
+    "caption": "PDF第19页表7",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 19
+  },
+  {
+    "id": "pdf_table_0114",
+    "caption": "PDF第19页表9",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 19
+  },
+  {
+    "id": "pdf_table_0115",
     "caption": "PDF第20页表1",
-    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l}\n\\hline\n区块 & 工艺单元 & 设备 & 投料 & 出料 & 工艺要求 & 环境要求 & 开始/结束指令 \\\\\n\\hline\n前处理 P & 入库 P1 & AGV & 合格物料 & 库存物料 & 质检合格(琥珀性状:色泽、 折射率;甘松、党参、黄精、三 七外观:是否污染、虫蛀;微 生物含量:符合药典要求微生 物含量:符合药典要求) & 无 & 入库开始、入库结束 \\\\\n出库 P2 & AGV & 库存物料 & 党参、黄精、 三七、琥珀、 甘松 & 无 & 无 & 出库开始、出库结束 &  \\\\\n称重 1P3 & 电子秤 & 党参、黄精、 三七、琥珀、 甘松 & 已 称 重 党 参、黄精、 三七、琥珀、 甘松 & 原料重量 & 无 & 称重开始、称重结束 &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
     "source_pdf": "精益六西格玛补充方案.pdf",
     "page": 20
   },
   {
-    "id": "pdf_table_0017",
+    "id": "pdf_table_0116",
+    "caption": "PDF第20页表2",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 20
+  },
+  {
+    "id": "pdf_table_0117",
+    "caption": "PDF第20页表3",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 20
+  },
+  {
+    "id": "pdf_table_0118",
+    "caption": "PDF第20页表5",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 20
+  },
+  {
+    "id": "pdf_table_0119",
+    "caption": "PDF第20页表7",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n党 黄 \\\\\n\\hline\n琥 甘 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 20
+  },
+  {
+    "id": "pdf_table_0120",
+    "caption": "PDF第20页表9",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 20
+  },
+  {
+    "id": "pdf_table_0121",
+    "caption": "PDF第20页表11",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 20
+  },
+  {
+    "id": "pdf_table_0122",
+    "caption": "PDF第20页表13",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 20
+  },
+  {
+    "id": "pdf_table_0123",
+    "caption": "PDF第20页表15",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l}\n\\hline\nUnnamed: 0 & 区块 & Unnamed: 1 & Unnamed: 2 & 工艺单元 & Unnamed: 3 & Unnamed: 4 & 设备 & Unnamed: 5 & Unnamed: 6 & 投料 & Unnamed: 7 & Unnamed: 8 & 出料 & Unnamed: 9 & Unnamed: 10 & 工艺要求 & Unnamed: 11 & Unnamed: 12 & 环境要求 & Unnamed: 13 & Unnamed: 14 & 开始/结束指令 & Unnamed: 15 \\\\\n\\hline\n前处理 P & 入库 P1 & AGV & 合格物料 & 库存物料 & 质检合格(琥珀性状:色泽、 折射率;甘松、党参、黄精、三 七外观:是否污染、虫蛀;微 生物含量:符合药典要求微生 物含量:符合药典要求) & 无 & 入库开始、入库结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n出库 P2 & AGV & 库存物料 & 党参、黄精、 三七、琥珀、 甘松 & 无 & 无 & 出库开始、出库结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n称重 1P3 & 电子秤 & 党参、黄精、 三七、琥珀、 甘松 & 已 称 重 党 参、黄精、 三七、琥珀、 甘松 & 原料重量 & 无 & 称重开始、称重结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 20
+  },
+  {
+    "id": "pdf_table_0124",
     "caption": "PDF第21页表1",
-    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l}\n\\hline\n区块 & 工艺单元 & 设备 & 投料 & 出料 & 工艺要求 & 环境要求 & 开始/结束指令 \\\\\n\\hline\n & 粉碎 P4 & 粉碎机 & 已 称 重 三 七、琥珀 & 琥珀细粉、 三七粗粉 & 粉末粒度 & 悬浮粒子含量 & 称重结束、粉碎结束 \\\\\n称重 2P5 & 电子秤 & 琥珀细粉、 三七粗粉 & 检验结果 & 原料重量 & 无 & 粉碎结束、称重结束 &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l}\n\\hline\nUnnamed: 0 & 区块 & Unnamed: 1 & Unnamed: 2 & 工艺单元 & Unnamed: 3 & Unnamed: 4 & 设备 & Unnamed: 5 & Unnamed: 6 & 投料 & Unnamed: 7 & Unnamed: 8 & 出料 & Unnamed: 9 & Unnamed: 10 & 工艺要求 & Unnamed: 11 & Unnamed: 12 & 环境要求 & Unnamed: 13 & Unnamed: 14 & 开始/结束指令 & Unnamed: 15 \\\\\n\\hline\n & 粉碎 P4 & 粉碎机 & 已 称 重 三 七、琥珀 & 琥珀细粉、 三七粗粉 & 粉末粒度 & 悬浮粒子含量 & 称重结束、粉碎结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n称重 2P5 & 电子秤 & 琥珀细粉、 三七粗粉 & 检验结果 & 原料重量 & 无 & 粉碎结束、称重结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
     "source_pdf": "精益六西格玛补充方案.pdf",
     "page": 21
   },
   {
-    "id": "pdf_table_0018",
+    "id": "pdf_table_0125",
+    "caption": "PDF第22页表1",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 22
+  },
+  {
+    "id": "pdf_table_0126",
+    "caption": "PDF第22页表4",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 22
+  },
+  {
+    "id": "pdf_table_0127",
+    "caption": "PDF第22页表6",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 22
+  },
+  {
+    "id": "pdf_table_0128",
+    "caption": "PDF第22页表10",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 22
+  },
+  {
+    "id": "pdf_table_0129",
+    "caption": "PDF第22页表15",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 22
+  },
+  {
+    "id": "pdf_table_0130",
+    "caption": "PDF第22页表16",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l}\n\\hline\n浓缩1 E17 & Unnamed: 0 \\\\\n\\hline\n收 & 醇 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 22
+  },
+  {
+    "id": "pdf_table_0131",
+    "caption": "PDF第22页表17",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 22
+  },
+  {
+    "id": "pdf_table_0132",
+    "caption": "PDF第22页表19",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 22
+  },
+  {
+    "id": "pdf_table_0133",
+    "caption": "PDF第22页表21",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n水提1 \\\\\n\\hline\nE06 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 22
+  },
+  {
+    "id": "pdf_table_0134",
+    "caption": "PDF第22页表22",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 22
+  },
+  {
+    "id": "pdf_table_0135",
+    "caption": "PDF第22页表23",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l}\n\\hline\n过滤2 E07 & Unnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 22
+  },
+  {
+    "id": "pdf_table_0136",
+    "caption": "PDF第22页表25",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 22
+  },
+  {
+    "id": "pdf_table_0137",
+    "caption": "PDF第22页表27",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 22
+  },
+  {
+    "id": "pdf_table_0138",
+    "caption": "PDF第22页表30",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 22
+  },
+  {
+    "id": "pdf_table_0139",
+    "caption": "PDF第22页表33",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 22
+  },
+  {
+    "id": "pdf_table_0140",
+    "caption": "PDF第22页表36",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n称 \\\\\n\\hline\n原料 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 22
+  },
+  {
+    "id": "pdf_table_0141",
+    "caption": "PDF第22页表39",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 22
+  },
+  {
+    "id": "pdf_table_0142",
+    "caption": "PDF第22页表41",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l}\n\\hline\n合并提取液 E16 & Unnamed: 0 & Unnamed: 1 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 22
+  },
+  {
+    "id": "pdf_table_0143",
+    "caption": "PDF第22页表42",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 22
+  },
+  {
+    "id": "pdf_table_0144",
+    "caption": "PDF第22页表46",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l}\n\\hline\n过滤7 E20 & Unnamed: 0 \\\\\n\\hline\n滤 &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 22
+  },
+  {
+    "id": "pdf_table_0145",
+    "caption": "PDF第22页表47",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l}\n\\hline\n浓缩3 E21 & Unnamed: 0 \\\\\n\\hline\n回收 &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 22
+  },
+  {
+    "id": "pdf_table_0146",
+    "caption": "PDF第22页表49",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 22
+  },
+  {
+    "id": "pdf_table_0147",
+    "caption": "PDF第22页表55",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 22
+  },
+  {
+    "id": "pdf_table_0148",
+    "caption": "PDF第22页表58",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 22
+  },
+  {
+    "id": "pdf_table_0149",
+    "caption": "PDF第22页表60",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 22
+  },
+  {
+    "id": "pdf_table_0150",
+    "caption": "PDF第22页表61",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l}\n\\hline\n水提3 E12 & Unnamed: 0 \\\\\n\\hline\n参、黄精 &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 22
+  },
+  {
+    "id": "pdf_table_0151",
+    "caption": "PDF第22页表62",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 22
+  },
+  {
+    "id": "pdf_table_0152",
+    "caption": "PDF第22页表63",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l}\n\\hline\n过滤5 E13 & Unnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 22
+  },
+  {
+    "id": "pdf_table_0153",
+    "caption": "PDF第22页表64",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n水提4 E14 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 22
+  },
+  {
+    "id": "pdf_table_0154",
+    "caption": "PDF第22页表65",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 22
+  },
+  {
+    "id": "pdf_table_0155",
+    "caption": "PDF第22页表67",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 22
+  },
+  {
+    "id": "pdf_table_0156",
+    "caption": "PDF第22页表71",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 22
+  },
+  {
+    "id": "pdf_table_0157",
+    "caption": "PDF第22页表73",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 22
+  },
+  {
+    "id": "pdf_table_0158",
     "caption": "PDF第23页表1",
-    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l}\n\\hline\n区块 & 工艺单元 & 设备 & 投料 & 出料 & 工艺要求 & 环境要求 & 开始/结束指令 \\\\\n\\hline\n提取纯化 E & 纯 化 水 制 备 E01 & 纯化水 及软化 水系统 & 饮用水 & 纯化水 & 无 & 无 & 制备开始、制备 结束 \\\\\n乙醇调配 E02 & 乙醇调 配罐 & 纯化水、新 乙醇 & 60%乙醇 & 无 & 温度、空气乙醇含量 & 调配开始、调配 结束 &  \\\\\n投料 E03 & AGV & 已称重原料 & 已称重原料 & 党参、黄精、三七、琥珀、甘松 投放量 & 温度、空气乙醇含量 & 接受投料指令、 投料结束 &  \\\\\n & 投料除 尘机器 & 无 & 粉尘 & 风压 & 温度、空气乙醇含量 & 投料开始、除尘 结束 &  \\\\\n醇提 1E04 & 提取罐 & 三七 & 醇提液 & 三七投料量、80%乙醇加入量、 浸泡时长、加热时长、加热温度 & 温度、空气乙醇含量 & 投料结束、醇提 1 结束 &  \\\\\n过滤 1E05 & 双联过 滤器 & 醇提 1 提取 液 & 滤液、滤渣 & 无 & 温度、空气乙醇含量 & 醇提 1 结束、过 滤 1结束 &  \\\\\n水提 1E06 & 提取罐 & 过滤 1滤渣 & 提取液 & 滤渣重量、饮用水体积、浸泡时 长、加热时长、加热温度 & 温度、空气乙醇含量 & 过滤 1 结束、水 提 1结束 &  \\\\\n过滤 2E07 & 双联过 滤器 & 水提 1 提取 液 & 滤液、滤渣 & 无 & 温度、空气乙醇含量 & 水提 1 结束、过 滤 2结束 &  \\\\\n水提 2E08 & 提取罐 & 过滤 2滤渣 & 提取液 & 滤渣重量、饮用水体积、浸泡时 长、加热时长、加热温度 & 温度、空气乙醇含量 & 过滤 2 结束、水 提 2结束 &  \\\\\n过滤 3E09 & 双联过 & 水提 2 提取 & 滤液、滤渣 & 无 & 温度、空气乙醇含量 & 水提 2 结束、过 &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l}\n\\hline\nUnnamed: 0 & 区块 & Unnamed: 1 & Unnamed: 2 & 工艺单元 & Unnamed: 3 & Unnamed: 4 & 设备 & Unnamed: 5 & Unnamed: 6 & 投料 & Unnamed: 7 & Unnamed: 8 & 出料 & Unnamed: 9 & Unnamed: 10 & 工艺要求 & Unnamed: 11 & Unnamed: 12 & 环境要求 & Unnamed: 13 & Unnamed: 14 & 开始/结束指令 & Unnamed: 15 \\\\\n\\hline\n提取纯化 E & 纯 化 水 制 备 E01 & 纯化水 及软化 水系统 & 饮用水 & 纯化水 & 无 & 无 & 制备开始、制备 结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n乙醇调配 E02 & 乙醇调 配罐 & 纯化水、新 乙醇 & 60%乙醇 & 无 & 温度、空气乙醇含量 & 调配开始、调配 结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n投料 E03 & AGV & 已称重原料 & 已称重原料 & 党参、黄精、三七、琥珀、甘松 投放量 & 温度、空气乙醇含量 & 接受投料指令、 投料结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n & 投料除 尘机器 & 无 & 粉尘 & 风压 & 温度、空气乙醇含量 & 投料开始、除尘 结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n醇提 1E04 & 提取罐 & 三七 & 醇提液 & 三七投料量、80%乙醇加入量、 浸泡时长、加热时长、加热温度 & 温度、空气乙醇含量 & 投料结束、醇提 1 结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n过滤 1E05 & 双联过 滤器 & 醇提1 提取 液 & 滤液、滤渣 & 无 & 温度、空气乙醇含量 & 醇提1 结束、过 滤 1 结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n水提 1E06 & 提取罐 & 过滤 1 滤渣 & 提取液 & 滤渣重量、饮用水体积、浸泡时 长、加热时长、加热温度 & 温度、空气乙醇含量 & 过滤1 结束、水 提 1 结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n过滤 2E07 & 双联过 滤器 & 水提1 提取 液 & 滤液、滤渣 & 无 & 温度、空气乙醇含量 & 水提1 结束、过 滤 2 结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n水提 2E08 & 提取罐 & 过滤 2 滤渣 & 提取液 & 滤渣重量、饮用水体积、浸泡时 长、加热时长、加热温度 & 温度、空气乙醇含量 & 过滤2 结束、水 提 2 结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n过滤 3E09 & 双联过 & 水提2 提取 & 滤液、滤渣 & 无 & 温度、空气乙醇含量 & 水提2 结束、过 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
     "source_pdf": "精益六西格玛补充方案.pdf",
     "page": 23
   },
   {
-    "id": "pdf_table_0019",
+    "id": "pdf_table_0159",
     "caption": "PDF第24页表1",
-    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l}\n\\hline\n区块 & 工艺单元 & 设备 & 投料 & 出料 & 工艺要求 & 环境要求 & 开始/结束指令 \\\\\n\\hline\n &  & 滤器 & 液 &  &  &  & 滤 3结束 \\\\\n蒸馏 E10 & 提取罐 & 甘松 & 提取液、甘 松挥发油 & 饮用水加入量、浸泡时长、加热 时长、加热温度 & 温度、空气乙醇含量 & 过滤 2 结束、蒸 馏结束 &  \\\\\n过滤 4E11 & 双联过 滤器 & 蒸馏提取液 & 滤液、滤渣 & 无 & 温度、空气乙醇含量 & 蒸馏结束、过滤 3 结束 &  \\\\\n水提 3E12 & 提取罐 & 党参、黄精 & 提取液 & 饮用水加入量、浸泡时长、加热 时长、加热温度 & 温度、空气乙醇含量 & 过滤 2 结束、水 提 1结束 &  \\\\\n过滤 5E13 & 双联过 滤器 & 水提 2 提取 液 & 滤液、滤渣 & 无 & 温度、空气乙醇含量 & 水提 2 结束、过 滤 4结束 &  \\\\\n水提 4E14 & 提取罐 & 过滤 5滤渣 & 提取液 & 滤渣重量、饮用水体积、浸泡时 长、加热时长、加热温度 & 温度、空气乙醇含量 & 过滤 5 结束、水 提 4结束 &  \\\\\n过滤 6E15 & 双联过 滤器 & 水提 4 提取 液 & 滤液、滤渣 & 无 & 温度、空气乙醇含量 & 水提 4 结束、过 滤 6结束 &  \\\\\n合 并 提 取 液 E16 & 提取液 储罐 & 醇提液、水 提液 & 混合提取液 & 无 & 温度、空气乙醇含量 & 过滤 6 结束、合 并提取液结束 &  \\\\\n浓缩 1E17 & 纯电蒸 发器 & 过滤 1滤液 & 醇 提 请 膏 体、回收乙 醇 & 目标相对密度、目标乙醇含量、 目标液位 & 温度、空气乙醇含量 & 过滤 1 结束、浓 缩 1结束 &  \\\\\n浓缩 2E18 & 纯电蒸 发器 & 混合提取液 & 浓缩液 & 目标相对密度、目标液位 & 温度、空气乙醇含量 & 合 并 提 取 液 结 束、浓缩 2结束 &  \\\\\n醇沉 E19 & 醇沉罐 & 浓缩液、乙 醇 & 醇沉液 & 目标乙醇浓度、搅拌时长、静置 时长 & 温度、空气乙醇含量 & 浓缩 2 结束、醇 沉结束 &  \\\\\n过滤 7E20 & 双联过 滤器 & 醇沉液 & 滤液、滤渣 & 无 & 温度、空气乙醇含量 & 醇沉结束、过滤 7 结束 &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l}\n\\hline\nUnnamed: 0 & 区块 & Unnamed: 1 & Unnamed: 2 & 工艺单元 & Unnamed: 3 & Unnamed: 4 & 设备 & Unnamed: 5 & Unnamed: 6 & 投料 & Unnamed: 7 & Unnamed: 8 & 出料 & Unnamed: 9 & Unnamed: 10 & 工艺要求 & Unnamed: 11 & Unnamed: 12 & 环境要求 & Unnamed: 13 & Unnamed: 14 & 开始/结束指令 & Unnamed: 15 \\\\\n\\hline\n &  & 滤器 & 液 &  &  &  & 滤 3 结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n蒸馏 E10 & 提取罐 & 甘松 & 提取液、甘 松挥发油 & 饮用水加入量、浸泡时长、加热 时长、加热温度 & 温度、空气乙醇含量 & 过滤2 结束、蒸 馏结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n过滤 4E11 & 双联过 滤器 & 蒸馏提取液 & 滤液、滤渣 & 无 & 温度、空气乙醇含量 & 蒸馏结束、过滤 3 结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n水提 3E12 & 提取罐 & 党参、黄精 & 提取液 & 饮用水加入量、浸泡时长、加热 时长、加热温度 & 温度、空气乙醇含量 & 过滤2 结束、水 提 1 结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n过滤 5E13 & 双联过 滤器 & 水提2 提取 液 & 滤液、滤渣 & 无 & 温度、空气乙醇含量 & 水提2 结束、过 滤 4 结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n水提 4E14 & 提取罐 & 过滤 5 滤渣 & 提取液 & 滤渣重量、饮用水体积、浸泡时 长、加热时长、加热温度 & 温度、空气乙醇含量 & 过滤5 结束、水 提 4 结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n过滤 6E15 & 双联过 滤器 & 水提4 提取 液 & 滤液、滤渣 & 无 & 温度、空气乙醇含量 & 水提4 结束、过 滤 6 结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n合 并 提 取 液 E16 & 提取液 储罐 & 醇提液、水 提液 & 混合提取液 & 无 & 温度、空气乙醇含量 & 过滤6 结束、合 并提取液结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n浓缩 1E17 & 纯电蒸 发器 & 过滤 1 滤液 & 醇 提 请 膏 体、回收乙 醇 & 目标相对密度、目标乙醇含量 目标液位 & 温度、空气乙醇含量 & 过滤1 结束、浓 缩 1 结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n浓缩 2E18 & 纯电蒸 发器 & 混合提取液 & 浓缩液 & 目标相对密度、目标液位 & 温度、空气乙醇含量 & 合 并 提 取 液 结 束、浓缩 2 结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n醇沉 E19 & 醇沉罐 & 浓缩液、乙 醇 & 醇沉液 & 目标乙醇浓度、搅拌时长、静置 时长 & 温度、空气乙醇含量 & 浓缩2 结束、醇 沉结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n过滤 7E20 & 双联过 滤器 & 醇沉液 & 滤液、滤渣 & 无 & 温度、空气乙醇含量 & 醇沉结束、过滤 7 结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
     "source_pdf": "精益六西格玛补充方案.pdf",
     "page": 24
   },
   {
-    "id": "pdf_table_0020",
+    "id": "pdf_table_0160",
     "caption": "PDF第25页表1",
-    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l}\n\\hline\n区块 & 工艺单元 & 设备 & 投料 & 出料 & 工艺要求 & 环境要求 & 开始/结束指令 \\\\\n\\hline\n & 浓缩 3E21 & 纯电蒸 发器 & 过滤 7滤液 & 水提稠膏、 回收乙醇 & 目标相对密度、目标液位 & 温度、空气乙醇含量 & 过滤 7 结束、浓 缩 3结束 \\\\\n质检 1E22 &  & 醇提 1样品 & 质检报告 & 提取液 pH、三七皂苷 R1含量、 三七皂苷 R2 含量、人参皂苷 Rb1含量、人参皂苷 Rb2含量、 人参皂苷 Rg1 含量、人参皂苷 Re 含量、人参皂苷 Rd 含量、 人参皂苷 Rh1 含量、人参皂苷 F1 含量、人参皂苷 F4含量 & 温度、空气乙醇含量 & 质检 1 开始、质 检 1结束 &  \\\\\n质检 2E23 &  & 浓缩 1样品 & 质检报告 & 浓缩液 pH、三七皂苷 R1含量、 三七皂苷 R2 含量、人参皂苷 Rb1含量、人参皂苷 Rb2含量、 人参皂苷 Rg1 含量、人参皂苷 Re 含量、人参皂苷 Rd 含量、 人参皂苷 Rh1 含量、人参皂苷 F1 含量、人参皂苷 F4含量 & 无 & 质检 2 开始、质 检 2结束 &  \\\\\n质检 3E24 &  & 水提 1样品 & 质检报告 & 提取液 pH、三七皂苷 R1含量、 三七皂苷 R2 含量、人参皂苷 Rb1含量、人参皂苷 Rb2含量、 人参皂苷 Rg1 含量、人参皂苷 Re 含量、人参皂苷 Rd 含量、 人参皂苷 Rh1 含量、人参皂苷 F1 含量、人参皂苷 F4含量 & 无 & 质检 3 开始、质 检 3结束 &  \\\\\n质检 4E25 &  & 水提 2样品 & 质检报告 & 提取液 pH、三七皂苷 R1含量、 & 无 & 质检 4 开始、质 &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l}\n\\hline\nUnnamed: 0 & 区块 & Unnamed: 1 & Unnamed: 2 & 工艺单元 & Unnamed: 3 & Unnamed: 4 & 设备 & Unnamed: 5 & Unnamed: 6 & 投料 & Unnamed: 7 & Unnamed: 8 & 出料 & Unnamed: 9 & Unnamed: 10 & 工艺要求 & Unnamed: 11 & Unnamed: 12 & 环境要求 & Unnamed: 13 & Unnamed: 14 & 开始/结束指令 & Unnamed: 15 \\\\\n\\hline\n & 浓缩 3E21 & 纯电蒸 发器 & 过滤 7 滤液 & 水提稠膏、 回收乙醇 & 目标相对密度、目标液位 & 温度、空气乙醇含量 & 过滤7 结束、浓 缩 3 结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n质检 1E22 &  & 醇提 1 样品 & 质检报告 & 提取液 pH、三七皂苷 R1 含量、 三七皂苷R2 含量、人参皂苷 Rb1 含量、人参皂苷 Rb2 含量、 人参皂苷 Rg1 含量、人参皂苷 Re 含量、人参皂苷 Rd 含量、 人参皂苷 Rh1 含量、人参皂苷 F1 含量、人参皂苷 F4 含量 & 温度、空气乙醇含量 & 质检1 开始、质 检 1 结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n质检 2E23 &  & 浓缩 1 样品 & 质检报告 & 浓缩液 pH、三七皂苷 R1 含量、 三七皂苷R2 含量、人参皂苷 Rb1 含量、人参皂苷 Rb2 含量、 人参皂苷 Rg1 含量、人参皂苷 Re 含量、人参皂苷 Rd 含量、 人参皂苷 Rh1 含量、人参皂苷 F1 含量、人参皂苷 F4 含量 & 无 & 质检2 开始、质 检 2 结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n质检 3E24 &  & 水提 1 样品 & 质检报告 & 提取液 pH、三七皂苷 R1 含量、 三七皂苷R2 含量、人参皂苷 Rb1 含量、人参皂苷 Rb2 含量、 人参皂苷 Rg1 含量、人参皂苷 Re 含量、人参皂苷 Rd 含量、 人参皂苷 Rh1 含量、人参皂苷 F1 含量、人参皂苷 F4 含量 & 无 & 质检3 开始、质 检 3 结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n质检 4E25 &  & 水提 2 样品 & 质检报告 & 提取液 pH、三七皂苷 R1 含量、 & 无 & 质检4 开始、质 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
     "source_pdf": "精益六西格玛补充方案.pdf",
     "page": 25
   },
   {
-    "id": "pdf_table_0021",
+    "id": "pdf_table_0161",
     "caption": "PDF第26页表1",
-    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l}\n\\hline\n区块 & 工艺单元 & 设备 & 投料 & 出料 & 工艺要求 三七皂苷 R2 含量、人参皂苷 Rb1含量、人参皂苷 Rb2含量、 人参皂苷 Rg1 含量、人参皂苷 Re 含量、人参皂苷 Rd 含量、 人参皂苷 Rh1 含量、人参皂苷 F1 含量 & 环境要求 & 开始/结束指令 检 4结束 \\\\\n\\hline\n质检 5E26 &  & 蒸馏样品 & 质检报告 & 甘松挥发油指纹图谱 & 无 & 质检 5 开始、质 检 5结束 &  \\\\\n质检 6E27 &  & 水提 3样品 & 质检报告 & 提取液 pH、党参炔苷、绿原酸 含量、新绿原酸含量、隐绿原酸 含量、紫丁香酚苷含量、原薯蓣 皂苷含量、总糖含量 & 无 & 质检 6 开始、质 检 6结束 &  \\\\\n质检 7E28 &  & 水提 4样品 & 质检报告 & 提取液 pH、党参炔苷、绿原酸 含量、新绿原酸含量、隐绿原酸 含量、紫丁香酚苷含量、原薯蓣 皂苷含量、总糖含量 & 无 & 质检 7 开始、质 检 7结束 &  \\\\\n质检 8E29 &  & 浓缩 2样品 & 质检报告 & 浓缩液 pH、党参炔苷含量、原 薯蓣皂苷含量、三七皂苷 R1 含 量、人参皂苷 Rb1 含量、人参 皂苷 Rg1 含量、人参皂苷 Rd 含 量、绿原酸含量、新绿原酸含 量、隐绿原酸含量、异绿原酸 A 含量、总糖含量 & 无 & 质检 8 开始、质 检 8结束 &  \\\\\n质检 9E30 &  & 醇沉样品 & 质检报告 & 醇沉液 pH、乙醇浓度、党参炔 & 无 & 质检 9 开始、质 &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l}\n\\hline\nUnnamed: 0 & 区块 & Unnamed: 1 & Unnamed: 2 & 工艺单元 & Unnamed: 3 三七皂苷R2 含量、人参皂苷 Rb1 含量、人参皂苷 Rb2 含量、 人参皂苷 Rg1 含量、人参皂苷 Re 含量、人参皂苷 Rd 含量、 人参皂苷 Rh1 含量、人参皂苷 F1 含量 & Unnamed: 4 & 设备 检 4 结束 & Unnamed: 5 & Unnamed: 6 & 投料 & Unnamed: 7 & Unnamed: 8 & 出料 & Unnamed: 9 & Unnamed: 10 & 工艺要求 & Unnamed: 11 & Unnamed: 12 & 环境要求 & Unnamed: 13 & Unnamed: 14 & 开始/结束指令 & Unnamed: 15 \\\\\n\\hline\n质检 5E26 &  & 蒸馏样品 & 质检报告 & 甘松挥发油指纹图谱 & 无 & 质检5 开始、质 检 5 结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n质检 6E27 &  & 水提 3 样品 & 质检报告 & 提取液 pH、党参炔苷、绿原酸 含量、新绿原酸含量、隐绿原酸 含量、紫丁香酚苷含量、原薯蓣 皂苷含量、总糖含量 & 无 & 质检6 开始、质 检 6 结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n质检 7E28 &  & 水提 4 样品 & 质检报告 & 提取液 pH、党参炔苷、绿原酸 含量、新绿原酸含量、隐绿原酸 含量、紫丁香酚苷含量、原薯蓣 皂苷含量、总糖含量 & 无 & 质检7 开始、质 检 7 结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n质检 8E29 &  & 浓缩 2 样品 & 质检报告 & 浓缩液 pH、党参炔苷含量、原 薯蓣皂苷含量、三七皂苷 R1 含 量、人参皂苷 Rb1 含量、人参 皂苷 Rg1 含量、人参皂苷 Rd 含 量、绿原酸含量、新绿原酸含 量、隐绿原酸含量、异绿原酸 A 含量、总糖含量 & 无 & 质检8 开始、质 检 8 结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n质检 9E30 &  & 醇沉样品 & 质检报告 & 醇沉液 pH、乙醇浓度、党参炔 & 无 & 质检9 开始、质 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
     "source_pdf": "精益六西格玛补充方案.pdf",
     "page": 26
   },
   {
-    "id": "pdf_table_0022",
+    "id": "pdf_table_0162",
     "caption": "PDF第27页表1",
-    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l}\n\\hline\n区块 & 工艺单元 & 设备 & 投料 & 出料 & 工艺要求 苷含量、原薯蓣皂苷含量、三七 皂苷 R1含量、人参皂苷 Rb1含 量、人参皂苷 Rg1 含量、人参 皂苷 Rd含量、绿原酸含量、新 绿原酸含量、隐绿原酸含量、异 绿原酸 A含量、总糖含量 & 环境要求 & 开始/结束指令 检 9结束 \\\\\n\\hline\n质检 10E31 &  & 浓缩 3样品 & 质检报告 & 浓缩液 pH、乙醇浓度、党参炔 苷含量、原薯蓣皂苷含量、三七 皂苷 R1含量、人参皂苷 Rb1含 量、人参皂苷 Rg1 含量、人参 皂苷 Rd含量、绿原酸含量、新 绿原酸含量、隐绿原酸含量、异 绿原酸 A含量、总糖含量 & 无 & 质检 10开始、质 检 10结束 &  \\\\\n称重 E32 & 电子秤 & 水提稠膏 & 已称重浸膏 & 浸膏重量 & 无 & 浓缩 3 结束、称 重结束 &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l}\n\\hline\nUnnamed: 0 & 区块 & Unnamed: 1 & Unnamed: 2 & 工艺单元 & Unnamed: 3 苷含量、原薯蓣皂苷含量、三七 皂苷 R1 含量、人参皂苷 Rb1 含 量、人参皂苷 Rg1 含量、人参 皂苷 Rd 含量、绿原酸含量、新 绿原酸含量、隐绿原酸含量、异 绿原酸 A 含量、总糖含量 & Unnamed: 4 & 设备 检 9 结束 & Unnamed: 5 & Unnamed: 6 & 投料 & Unnamed: 7 & Unnamed: 8 & 出料 & Unnamed: 9 & Unnamed: 10 & 工艺要求 & Unnamed: 11 & Unnamed: 12 & 环境要求 & Unnamed: 13 & Unnamed: 14 & 开始/结束指令 & Unnamed: 15 \\\\\n\\hline\n质检 10E31 &  & 浓缩 3 样品 & 质检报告 & 浓缩液 pH、乙醇浓度、党参炔 苷含量、原薯蓣皂苷含量、三七 皂苷 R1 含量、人参皂苷 Rb1 含 量、人参皂苷 Rg1 含量、人参 皂苷 Rd 含量、绿原酸含量、新 绿原酸含量、隐绿原酸含量、异 绿原酸 A 含量、总糖含量 & 无 & 质检 10 开始、质 检 10 结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n称重 E32 & 电子秤 & 水提稠膏 & 已称重浸膏 & 浸膏重量 & 无 & 浓缩3 结束、称 重结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
     "source_pdf": "精益六西格玛补充方案.pdf",
     "page": 27
   },
   {
-    "id": "pdf_table_0023",
+    "id": "pdf_table_0163",
     "caption": "PDF第28页表1",
-    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l}\n\\hline\n区块 & 工艺单元 & 设备 & 投料 & 出料 & 工艺要求 & 环境要求 & 起始指令 \\\\\n\\hline\n制剂 C & 粉碎 C01 & 粉碎机 & 蔗糖、β-环糊 精、阿帕斯 坦、糊精 & 已粉碎辅料 & 物料粒径 & 温度、湿度、空气 颗粒度、风速、压 差 & 粉碎开始、粉碎结束 \\\\\n过筛 C02 & 振动筛 & 已粉碎辅料 & 合格辅料粉 末、未过筛 辅料块 & 物料粒径 & 温度、湿度、空气 颗粒度、风速、压 差 & 粉碎结束、过筛结束 &  \\\\\n称重 C03 & 电子秤 & 合格辅料粉 末 & 定量辅料 & 物料重量 & 温度、湿度、空气 颗粒度、风速、压 & 过筛结束、称重结束 &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\n蔗糖 -环糊精 \\\\\n\\hline\n阿帕斯坦 糊精 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
     "source_pdf": "精益六西格玛补充方案.pdf",
     "page": 28
   },
   {
-    "id": "pdf_table_0024",
+    "id": "pdf_table_0164",
+    "caption": "PDF第28页表2",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l}\n\\hline\nUnnamed: 0 & Unnamed: 1 & Unnamed: 2 \\\\\n\\hline\n粉碎 C01 &  & 过筛 C02 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 28
+  },
+  {
+    "id": "pdf_table_0165",
+    "caption": "PDF第28页表3",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l}\n\\hline\nUnnamed: 0 & Unnamed: 1 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 28
+  },
+  {
+    "id": "pdf_table_0166",
+    "caption": "PDF第28页表5",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 28
+  },
+  {
+    "id": "pdf_table_0167",
+    "caption": "PDF第28页表6",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 28
+  },
+  {
+    "id": "pdf_table_0168",
+    "caption": "PDF第28页表8",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 28
+  },
+  {
+    "id": "pdf_table_0169",
+    "caption": "PDF第28页表10",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 28
+  },
+  {
+    "id": "pdf_table_0170",
+    "caption": "PDF第28页表12",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 28
+  },
+  {
+    "id": "pdf_table_0171",
+    "caption": "PDF第28页表14",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 28
+  },
+  {
+    "id": "pdf_table_0172",
+    "caption": "PDF第28页表16",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 28
+  },
+  {
+    "id": "pdf_table_0173",
+    "caption": "PDF第28页表20",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 28
+  },
+  {
+    "id": "pdf_table_0174",
+    "caption": "PDF第28页表22",
+    "latex": "\\begin{table}\n\\begin{tabular}{l}\n\\hline\nUnnamed: 0 \\\\\n\\hline\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 28
+  },
+  {
+    "id": "pdf_table_0175",
+    "caption": "PDF第28页表23",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l}\n\\hline\nUnnamed: 0 & 区块 & Unnamed: 1 & Unnamed: 2 & 工艺单元 & Unnamed: 3 & Unnamed: 4 & 设备 & Unnamed: 5 & Unnamed: 6 & 投料 & Unnamed: 7 & Unnamed: 8 & 出料 & Unnamed: 9 & Unnamed: 10 & 工艺要求 & Unnamed: 11 & Unnamed: 12 & 环境要求 & Unnamed: 13 & Unnamed: 14 & 起始指令 & Unnamed: 15 \\\\\n\\hline\n制剂 C & 粉碎 C01 & 粉碎机 & 蔗糖、β-环糊 精、阿帕斯 坦、糊精 & 已粉碎辅料 & 物料粒径 & 温度、湿度、空气 颗粒度、风速、压 差 & 粉碎开始、粉碎结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n过筛 C02 & 振动筛 & 已粉碎辅料 & 合格辅料粉 末、未过筛 辅料块 & 物料粒径 & 温度、湿度、空气 颗粒度、风速、压 差 & 粉碎结束、过筛结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n称重 C03 & 电子秤 & 合格辅料粉 末 & 定量辅料 & 物料重量 & 温度、湿度、空气 颗粒度、风速、压 & 过筛结束、称重结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "source_pdf": "精益六西格玛补充方案.pdf",
+    "page": 28
+  },
+  {
+    "id": "pdf_table_0176",
     "caption": "PDF第29页表1",
-    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l}\n\\hline\n区块 & 工艺单元 & 设备 & 投料 & 出料 & 工艺要求 & 环境要求 差 & 起始指令 \\\\\n\\hline\n混合 C04 & 混合机 & 浸膏、琥珀 细粉、定量 辅料 & 混合浸膏 & 搅拌机转速 & 温度、湿度、空气 颗粒度、风速、压 差 & 称重结束、混合结束 &  \\\\\n制粒 C05 & 一 步 制 粒 机 & 混合浸膏 & 粗颗粒 & 喷液时间、粒径、床层孔隙率、 物料水分、物料温度、物料湿 度 & 温度、湿度、空气 颗粒度、风速、压 差 & 原辅料准备结束、制 粒结束 &  \\\\\n整粒 C06 & 整粒机 & 颗粒 & 已整颗粒 & 无 & 温度、湿度、空气 颗粒度、风速、压 差 & 制粒结束、整粒结束 &  \\\\\n总混 C07 & 总混机 & 已整颗粒、 硬脂酸镁 & 均匀颗粒 & 混合时间、物料均匀度 & 温度、湿度、空气 颗粒度、风速、压 差 & 整粒结束、总混结束 &  \\\\\n质检 1C08 &  & 制粒样品 & 质检报告 & 颗粒均匀性、颗粒含水量、粒 径、温度、溶出度、干燥失重 & 无 & 质检 1开始、质检 1 结束 &  \\\\\n质检 2C09 &  & 总混样品 & 质检报告 & 颗粒均匀性、颗粒含水量、粒 径、温度、溶出度、干燥失重、 含水量、党参炔苷含量、原薯 蓣皂苷含量、三七皂苷 R1 含 量、人参皂苷 Rb1含量、人参 皂苷 Rg1 含量、人参皂苷 Rd 含量、绿原酸含量、新绿原酸 含量、隐绿原酸含量、异绿原 酸 A含量、总糖含量 & 无 & 质检 2开始、质检 2 结束 &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+    "latex": "\\begin{table}\n\\begin{tabular}{l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l | l}\n\\hline\nUnnamed: 0 & 区块 & Unnamed: 1 & Unnamed: 2 & 工艺单元 & Unnamed: 3 & Unnamed: 4 差 & 设备 & Unnamed: 5 & Unnamed: 6 & 投料 & Unnamed: 7 & Unnamed: 8 & 出料 & Unnamed: 9 & Unnamed: 10 & 工艺要求 & Unnamed: 11 & Unnamed: 12 & 环境要求 & Unnamed: 13 & Unnamed: 14 & 起始指令 & Unnamed: 15 \\\\\n\\hline\n混合 C04 & 混合机 & 浸膏、琥珀 细粉、定量 辅料 & 混合浸膏 & 搅拌机转速 & 温度、湿度、空气 颗粒度、风速、压 差 & 称重结束、混合结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n制粒 C05 & 一步制粒 机 & 混合浸膏 & 粗颗粒 & 喷液时间、粒径、床层孔隙率、 物料水分、物料温度、物料湿 度 & 温度、湿度、空气 颗粒度、风速、压 差 & 原辅料准备结束、制 粒结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n整粒 C06 & 整粒机 & 颗粒 & 已整颗粒 & 无 & 温度、湿度、空气 颗粒度、风速、压 差 & 制粒结束、整粒结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n总混 C07 & 总混机 & 已整颗粒、 硬脂酸镁 & 均匀颗粒 & 混合时间、物料均匀度 & 温度、湿度、空气 颗粒度、风速、压 差 & 整粒结束、总混结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n质检 1C08 &  & 制粒样品 & 质检报告 & 颗粒均匀性、颗粒含水量、粒 径、温度、溶出度、干燥失重 & 无 & 质检 1 开始、质检 1 结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n质检 2C09 &  & 总混样品 & 质检报告 & 颗粒均匀性、颗粒含水量、粒 径、温度、溶出度、干燥失重、 含水量、党参炔苷含量、原薯 蓣皂苷含量、三七皂苷R1 含 量、人参皂苷 Rb1 含量、人参 皂苷 Rg1 含量、人参皂苷 Rd 含量、绿原酸含量、新绿原酸 含量、隐绿原酸含量、异绿原 酸 A 含量、总糖含量 & 无 & 质检 2 开始、质检 2 结束 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
     "source_pdf": "精益六西格玛补充方案.pdf",
     "page": 29
   }

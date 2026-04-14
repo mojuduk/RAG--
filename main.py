@@ -17,6 +17,10 @@ from rag.config import (
     NOUGAT_CMD,
     PDF_IMAGE_DIR,
     PDF_IMAGE_DPI,
+    DOCX_IMAGE_DIR,
+    PDF_IMAGE_EXTRACT_DIR,
+    PDF_OCR_IMAGE_DIR,
+    PDF_OCR_DPI,
 )
 from rag.ingest_docx import ingest_docs
 from rag.pdf_ingest import ingest_pdfs
@@ -27,7 +31,7 @@ from rag.vector_store import build_chroma_index, query_chroma
 
 def handle_ingest(args):
     docs = [Path(p) for p in args.docs] if args.docs else DEFAULT_DOCS
-    chunks = ingest_docs(docs, KNOWLEDGE_BASE_PATH, CLEANED_DATA_PATH)
+    chunks = ingest_docs(docs, KNOWLEDGE_BASE_PATH, CLEANED_DATA_PATH, image_dir=DOCX_IMAGE_DIR)
     print(f"Ingested {len(docs)} docx -> {KNOWLEDGE_BASE_PATH}")
     print(f"Cleaned text -> {CLEANED_DATA_PATH}")
     table_examples = [c for c in chunks if c.get("metadata")][:2]
@@ -50,6 +54,10 @@ def handle_pdf_ingest(args):
         tabula_lattice=not args.tabula_no_lattice,
         tabula_stream=not args.tabula_no_stream,
         tabula_jvm_opts=args.tabula_jvm_opts,
+        image_extract_dir=PDF_IMAGE_EXTRACT_DIR,
+        ocr_on_garbled=args.ocr_on_garbled,
+        ocr_image_dir=PDF_OCR_IMAGE_DIR,
+        ocr_dpi=args.ocr_dpi,
     )
     KNOWLEDGE_BASE_PATH.parent.mkdir(parents=True, exist_ok=True)
     with KNOWLEDGE_BASE_PATH.open("w", encoding="utf-8") as f:
@@ -151,6 +159,17 @@ def build_parser():
         help="Table extraction backend for PDF.",
     )
     pdf_parser.add_argument(
+        "--ocr-on-garbled",
+        action="store_true",
+        help="Run PaddleOCR when PDF text is garbled.",
+    )
+    pdf_parser.add_argument(
+        "--ocr-dpi",
+        type=int,
+        default=PDF_OCR_DPI,
+        help="DPI used when rendering pages for OCR.",
+    )
+    pdf_parser.add_argument(
         "--tabula-no-guess",
         action="store_true",
         help="Disable tabula guess mode.",
@@ -167,8 +186,8 @@ def build_parser():
     )
     pdf_parser.add_argument(
         "--tabula-jvm-opts",
-        nargs=argparse.REMAINDER,
-        help="Extra JVM options for tabula, e.g. -Dfile.encoding=UTF-8",
+        type=str,
+        help="Extra JVM options for tabula, separated by ';' e.g. -Dfile.encoding=UTF-8;-Djava.awt.headless=true",
     )
     pdf_parser.set_defaults(func=handle_pdf_ingest)
 

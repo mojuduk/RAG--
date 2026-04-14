@@ -27,7 +27,12 @@ DEFAULT_PDFS = [
 PDF_MMD_DIR = DATA_DIR / "mmd"
 TABLE_PARENTS_PATH = DATA_DIR / "table_parents.json"
 NOUGAT_CMD = ["python", "-m", "predict"]
+# Images rendered for Nougat input
 PDF_IMAGE_DIR = DATA_DIR / "pdf_images"
+DOCX_IMAGE_DIR = IMAGE_DIR / "docx"
+PDF_IMAGE_EXTRACT_DIR = IMAGE_DIR / "pdf"
+PDF_OCR_IMAGE_DIR = IMAGE_DIR / "pdf_ocr"
+PDF_OCR_DPI = 200
 PDF_IMAGE_DPI = 200
 
 CHUNK_SIZE = 800

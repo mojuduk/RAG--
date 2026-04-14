@@ -42,7 +42,64 @@ def split_paragraphs(text):
     return cleaned
 
 
-def extract_pdf_text_chunks(pdf_path):
+def _run_paddle_ocr_on_image(image_path):
+    try:
+        from paddleocr import PaddleOCR
+    except Exception as exc:  # pragma: no cover
+        raise RuntimeError("paddleocr not installed; cannot run OCR.") from exc
+
+    ocr = PaddleOCR(use_angle_cls=True, lang="ch", show_log=False)
+    results = ocr.ocr(str(image_path), cls=True)
+    lines = []
+    for line in results or []:
+        if not line:
+            continue
+        text = line[1][0]
+        if text:
+            lines.append(text)
+    return "\n".join(lines)
+
+
+def _is_diagram_line(line):
+    if not line:
+        return True
+    tokens = re.split(r"\s+", line.strip())
+    if not tokens:
+        return True
+    single_ratio = sum(1 for t in tokens if len(t) == 1) / len(tokens)
+    avg_len = sum(len(t) for t in tokens) / len(tokens)
+    # Heuristic: many isolated single chars, low avg token length.
+    if single_ratio >= 0.6 and avg_len <= 1.2:
+        return True
+    # Heuristic: spaced single CJK characters
+    if re.search(r"(?:[\u4e00-\u9fff]\s+){6,}", line):
+        return True
+    return False
+
+
+def _filter_ocr_text(ocr_text):
+    lines = [normalize_text(l) for l in ocr_text.splitlines()]
+    lines = [l for l in lines if l]
+    cleaned = []
+    skip_diagram = False
+    for line in lines:
+        is_caption = re.match(r"^(图|表)\s*\d+", line)
+        if is_caption:
+            cleaned.append(line)
+            skip_diagram = True
+            continue
+        if skip_diagram:
+            if _is_diagram_line(line):
+                continue
+            # End skipping when a normal sentence appears
+            skip_diagram = False
+        if _is_diagram_line(line):
+            continue
+        cleaned.append(line)
+    return "\n".join(cleaned)
+
+
+def extract_pdf_text_chunks(pdf_path, ocr_on_garbled=False, ocr_image_dir=None, ocr_dpi=200):
     try:
         import pdfplumber
     except Exception as exc:  # pragma: no cover
@@ -51,12 +108,127 @@ def extract_pdf_text_chunks(pdf_path):
     chunks = []
     with pdfplumber.open(pdf_path) as pdf:
         for page_num, page in enumerate(pdf.pages, 1):
-            text = page.extract_text() or ""
+            raw_text = page.extract_text() or ""
+            text = clean_mojibake_text(raw_text)
+            # Heuristic: detect garbled text by very short tokens and low punctuation/number signal.
+            tokens = re.split(r"\s+", raw_text.strip()) if raw_text else []
+            avg_len = (sum(len(t) for t in tokens) / len(tokens)) if tokens else 0
+            short_token_ratio = (
+                sum(1 for t in tokens if len(t) <= 1) / len(tokens)
+            ) if tokens else 0
+            qmark_ratio = (raw_text.count("?") / max(1, len(raw_text)))
+            garbled = (
+                ("�" in raw_text)
+                or qmark_ratio >= 0.003
+                or (raw_text.count("?") >= 5)
+                or (len(tokens) > 30 and avg_len <= 1.3 and short_token_ratio >= 0.6)
+            )
+            if garbled:
+                if not ocr_on_garbled:
+                    continue
+                # OCR fallback
+                ocr_text = ""
+                if ocr_image_dir is not None:
+                    ocr_image_dir.mkdir(parents=True, exist_ok=True)
+                try:
+                    # Render this page to image for OCR
+                    import pdfplumber
+                    page_image = page.to_image(resolution=ocr_dpi)
+                    image_path = None
+                    if ocr_image_dir is not None:
+                        image_path = ocr_image_dir / f"{Path(pdf_path).stem}_p{page_num:03d}.png"
+                        page_image.save(str(image_path), format="PNG")
+                    else:
+                        image_path = page_image.original
+                    ocr_text = _run_paddle_ocr_on_image(image_path)
+                except Exception:
+                    ocr_text = ""
+                if not ocr_text:
+                    continue
+                text = clean_mojibake_text(_filter_ocr_text(ocr_text))
             for para in split_paragraphs(text):
                 chunks.append({
                     "content": para,
                     "metadata": {"source": "pdf", "page": page_num, "chunk_type": "text"},
                 })
+    return chunks
+
+
+def extract_pdf_image_chunks(pdf_path, image_dir=None, image_dpi=200):
+    try:
+        import pdfplumber
+    except Exception as exc:  # pragma: no cover
+        raise RuntimeError("pdfplumber not installed; cannot extract PDF images.") from exc
+
+    chunks = []
+    if image_dir is not None:
+        image_dir.mkdir(parents=True, exist_ok=True)
+    with pdfplumber.open(pdf_path) as pdf:
+        for page_num, page in enumerate(pdf.pages, 1):
+            images = page.images or []
+            words = page.extract_words() or []
+            # Build simple line groups by y-position
+            lines = {}
+            for w in words:
+                top = round(w.get("top", 0), 1)
+                lines.setdefault(top, []).append(w.get("text", ""))
+            sorted_lines = sorted((t, " ".join(v).strip()) for t, v in lines.items() if " ".join(v).strip())
+            page_title = sorted_lines[0][1] if sorted_lines else ""
+            for idx, img in enumerate(images, 1):
+                x0 = img.get("x0")
+                x1 = img.get("x1")
+                top = img.get("top")
+                bottom = img.get("bottom")
+                width = None
+                height = None
+                if x0 is not None and x1 is not None:
+                    width = round(x1 - x0, 2)
+                if top is not None and bottom is not None:
+                    height = round(bottom - top, 2)
+
+                image_path = ""
+                if image_dir is not None and None not in (x0, x1, top, bottom):
+                    bbox = (x0, top, x1, bottom)
+                    try:
+                        cropped = page.within_bbox(bbox)
+                        image = cropped.to_image(resolution=image_dpi)
+                        image_path = str(
+                            image_dir
+                            / f"{Path(pdf_path).stem}_p{page_num:03d}_img{idx:02d}.png"
+                        )
+                        image.save(image_path, format="PNG")
+                    except Exception:
+                        image_path = ""
+
+                above_text = ""
+                if top is not None and sorted_lines:
+                    candidates = [line for t, line in sorted_lines if t < top and line]
+                    if candidates:
+                        above_text = candidates[-1]
+
+                content = f"PDF第{page_num}页图片{idx}"
+                if page_title:
+                    content += f"；标题：{page_title}"
+                if above_text:
+                    content += f"；上文：{above_text}"
+                if width is not None and height is not None:
+                    content += f"，宽高约{width}x{height}"
+                if image_path:
+                    content += f"。文件: {image_path}"
+
+                chunks.append(
+                    {
+                        "content": content,
+                        "metadata": {
+                            "source": "pdf",
+                            "chunk_type": "image",
+                            "page": page_num,
+                            "image_path": image_path,
+                            "title": page_title,
+                            "above_text": above_text,
+                        },
+                    }
+                )
     return chunks
 
 
@@ -223,7 +395,10 @@ def extract_tables_tabula(pdf_path, tabula_guess, tabula_lattice, tabula_stream,
         page_total = len(pdf.pages)
 
     if tabula_jvm_opts is None:
-        tabula_jvm_opts = ["-Dfile.encoding=UTF-8"]
+        tabula_jvm_opts = ["-Dfile.encoding=UTF-8", "-Djava.awt.headless=true"]
+    elif isinstance(tabula_jvm_opts, str):
+        raw_opts = [opt for opt in tabula_jvm_opts.split(";") if opt]
+        tabula_jvm_opts = [opt.strip().strip('"').strip("'") for opt in raw_opts]
 
     for page_num in range(1, page_total + 1):
         try:
@@ -345,9 +520,21 @@ def ingest_pdf(
     tabula_lattice=True,
     tabula_stream=True,
     tabula_jvm_opts=None,
+    image_extract_dir=None,
+    ocr_on_garbled=False,
+    ocr_image_dir=None,
+    ocr_dpi=200,
 ):
     chunks = []
-    chunks.extend(extract_pdf_text_chunks(pdf_path))
+    chunks.extend(
+        extract_pdf_text_chunks(
+            pdf_path,
+            ocr_on_garbled=ocr_on_garbled,
+            ocr_image_dir=ocr_image_dir,
+            ocr_dpi=ocr_dpi,
+        )
+    )
+    chunks.extend(extract_pdf_image_chunks(pdf_path, image_dir=image_extract_dir, image_dpi=image_dpi))
 
     tables = []
     if table_tool == "nougat":
@@ -422,6 +609,10 @@ def ingest_pdfs(
     tabula_lattice=True,
     tabula_stream=True,
     tabula_jvm_opts=None,
+    image_extract_dir=None,
+    ocr_on_garbled=False,
+    ocr_image_dir=None,
+    ocr_dpi=200,
 ):
     all_chunks = []
     all_parents = []
@@ -444,6 +635,10 @@ def ingest_pdfs(
             tabula_lattice=tabula_lattice,
             tabula_stream=tabula_stream,
             tabula_jvm_opts=tabula_jvm_opts,
+            image_extract_dir=image_extract_dir,
+            ocr_on_garbled=ocr_on_garbled,
+            ocr_image_dir=ocr_image_dir,
+            ocr_dpi=ocr_dpi,
         )
         all_chunks.extend(chunks)
         all_parents.extend(parents)
