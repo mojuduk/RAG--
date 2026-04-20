@@ -36,12 +36,32 @@ def _get_collection(persist_dir, collection_name, model_name):
     return collection
 
 
+def _sanitize_metadata_value(value):
+    # Chroma metadata only allows scalar values (str/int/float/bool/None).
+    if isinstance(value, (str, int, float, bool)) or value is None:
+        return value
+    if isinstance(value, (list, tuple, set)):
+        if all(isinstance(v, (str, int, float, bool)) or v is None for v in value):
+            return " | ".join("" if v is None else str(v) for v in value)
+        return json.dumps(list(value), ensure_ascii=False)
+    if isinstance(value, dict):
+        return json.dumps(value, ensure_ascii=False, sort_keys=True)
+    return str(value)
+
+
+def _sanitize_metadata(metadata):
+    out = {}
+    for k, v in (metadata or {}).items():
+        out[str(k)] = _sanitize_metadata_value(v)
+    return out
+
+
 def build_chroma_index(chunks, persist_dir, store_path, model_name, collection_name="rag_chunks"):
     texts = [chunk["content"] for chunk in chunks]
     ids = [f"chunk_{i:06d}" for i in range(len(chunks))]
     metadatas = []
     for chunk in chunks:
-        metadata = dict(chunk.get("metadata", {}))
+        metadata = _sanitize_metadata(dict(chunk.get("metadata", {})))
         metadata["source"] = "knowledge_base"
         metadatas.append(metadata)
 

@@ -10,11 +10,17 @@ CHUNKS_PATH = DATA_DIR / "chunks.jsonl"
 VECTOR_PATH = INDEX_DIR / "tfidf.npz"
 VECTORIZER_PATH = INDEX_DIR / "vectorizer.joblib"
 KNOWLEDGE_BASE_PATH = DATA_DIR / "knowledge_base.json"
+KNOWLEDGE_BASE_DOCX_PATH = DATA_DIR / "knowledge_base_docx.json"
+KNOWLEDGE_BASE_PDF_PATH = DATA_DIR / "knowledge_base_pdf.json"
 CLEANED_DATA_PATH = DATA_DIR / "cleaned_data.txt"
+CLEANED_DOCX_PATH = DATA_DIR / "cleaned_docx.txt"
+CLEANED_PDF_PATH = DATA_DIR / "cleaned_pdf.txt"
 
 CHROMA_DIR = INDEX_DIR / "chroma"
 VECTOR_STORE_PATH = INDEX_DIR / "vector_store.json"
 EMBEDDING_MODEL_NAME = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+OLLAMA_BASE_URL = "http://127.0.0.1:11434"
+OLLAMA_MODEL_NAME = "qwen3:8b"
 
 DEFAULT_DOCS = [
     BASE_DIR / "精益六西格玛补充方案.docx",

@@ -4,6 +4,12 @@ import re
 import subprocess
 from pathlib import Path
 
+_PADDLE_OCR = None
+_FIGURE_CAPTION_RE = re.compile(
+    r"^\s*(图|Figure|Fig\.?)\s*([0-9一二三四五六七八九十百千IVXivx\-\._]*)\s*[:：.\-]?\s*(.*)$",
+    re.IGNORECASE,
+)
+
 
 def normalize_text(text):
     text = text.replace("\u00a0", " ")
@@ -42,13 +48,23 @@ def split_paragraphs(text):
     return cleaned
 
 
-def _run_paddle_ocr_on_image(image_path):
+def _get_paddle_ocr():
+    global _PADDLE_OCR
+    if _PADDLE_OCR is not None:
+        return _PADDLE_OCR
     try:
         from paddleocr import PaddleOCR
-    except Exception as exc:  # pragma: no cover
-        raise RuntimeError("paddleocr not installed; cannot run OCR.") from exc
+    except Exception:
+        _PADDLE_OCR = False
+        return _PADDLE_OCR
+    _PADDLE_OCR = PaddleOCR(use_angle_cls=True, lang="ch", show_log=False)
+    return _PADDLE_OCR
 
-    ocr = PaddleOCR(use_angle_cls=True, lang="ch", show_log=False)
+
+def _run_paddle_ocr_on_image(image_path):
+    ocr = _get_paddle_ocr()
+    if not ocr:
+        raise RuntimeError("paddleocr not installed; cannot run OCR.")
     results = ocr.ocr(str(image_path), cls=True)
     lines = []
     for line in results or []:
@@ -99,6 +115,96 @@ def _filter_ocr_text(ocr_text):
     return "\n".join(cleaned)
 
 
+def _extract_figure_no_and_caption(text):
+    text = clean_mojibake_text(text)
+    if not text:
+        return "", ""
+    m = _FIGURE_CAPTION_RE.match(text)
+    if not m:
+        return "", ""
+    prefix = m.group(1)
+    number = normalize_text(m.group(2) or "")
+    tail = clean_mojibake_text(m.group(3) or "")
+    figure_no = f"{prefix}{number}".strip() if number else prefix
+    caption = text if tail else figure_no
+    return figure_no, caption
+
+
+def _extract_key_entities(text, limit=8):
+    text = clean_mojibake_text(text)
+    if not text:
+        return []
+    cands = re.findall(r"[\u4e00-\u9fffA-Za-z0-9][\u4e00-\u9fffA-Za-z0-9\-/]{1,24}", text)
+    stop = {
+        "图片",
+        "图",
+        "表",
+        "第",
+        "页",
+        "文件",
+        "标题",
+        "上文",
+        "图中文字",
+        "过程参数",
+        "物料属性",
+        "生产操作指令",
+    }
+    out = []
+    seen = set()
+    for c in cands:
+        c = c.strip("-_/")
+        if len(c) < 2:
+            continue
+        if c in stop:
+            continue
+        if c in seen:
+            continue
+        seen.add(c)
+        out.append(c)
+        if len(out) >= limit:
+            break
+    return out
+
+
+def _build_sorted_lines(words):
+    lines = {}
+    for w in words:
+        top = round(float(w.get("top", 0)), 1)
+        bucket = lines.setdefault(top, [])
+        bucket.append((float(w.get("x0", 0)), w.get("text", "")))
+    out = []
+    for top, items in lines.items():
+        items = sorted(items, key=lambda x: x[0])
+        txt = clean_mojibake_text(" ".join(t for _, t in items))
+        if txt:
+            out.append((top, txt))
+    return sorted(out, key=lambda x: x[0])
+
+
+def _closest_line_above(sorted_lines, top, max_gap=40.0):
+    if top is None:
+        return ""
+    cand = [(y, txt) for y, txt in sorted_lines if y < top and (top - y) <= max_gap and txt]
+    if not cand:
+        return ""
+    return cand[-1][1]
+
+
+def _closest_caption_line(sorted_lines, anchor_y, max_gap=30.0, prefer_above=True):
+    if anchor_y is None:
+        return ""
+    if prefer_above:
+        cands = [(y, txt) for y, txt in sorted_lines if y < anchor_y and (anchor_y - y) <= max_gap]
+        cands = cands[::-1]
+    else:
+        cands = [(y, txt) for y, txt in sorted_lines if y > anchor_y and (y - anchor_y) <= max_gap]
+    for _, txt in cands:
+        fig_no, cap = _extract_figure_no_and_caption(txt)
+        if fig_no:
+            return cap
+    return ""
+
+
 def extract_pdf_text_chunks(pdf_path, ocr_on_garbled=False, ocr_image_dir=None, ocr_dpi=200):
     try:
         import pdfplumber
@@ -123,6 +229,7 @@ def extract_pdf_text_chunks(pdf_path, ocr_on_garbled=False, ocr_image_dir=None, 
                 or (raw_text.count("?") >= 5)
                 or (len(tokens) > 30 and avg_len <= 1.3 and short_token_ratio >= 0.6)
             )
+            used_ocr = False
             if garbled:
                 if not ocr_on_garbled:
                     continue
@@ -146,10 +253,16 @@ def extract_pdf_text_chunks(pdf_path, ocr_on_garbled=False, ocr_image_dir=None, 
                 if not ocr_text:
                     continue
                 text = clean_mojibake_text(_filter_ocr_text(ocr_text))
+                used_ocr = True
             for para in split_paragraphs(text):
                 chunks.append({
                     "content": para,
-                    "metadata": {"source": "pdf", "page": page_num, "chunk_type": "text"},
+                    "metadata": {
+                        "source": "pdf",
+                        "page": page_num,
+                        "chunk_type": "text",
+                        "used_ocr": used_ocr,
+                    },
                 })
     return chunks
 
@@ -167,12 +280,7 @@ def extract_pdf_image_chunks(pdf_path, image_dir=None, image_dpi=200):
         for page_num, page in enumerate(pdf.pages, 1):
             images = page.images or []
             words = page.extract_words() or []
-            # Build simple line groups by y-position
-            lines = {}
-            for w in words:
-                top = round(w.get("top", 0), 1)
-                lines.setdefault(top, []).append(w.get("text", ""))
-            sorted_lines = sorted((t, " ".join(v).strip()) for t, v in lines.items() if " ".join(v).strip())
+            sorted_lines = _build_sorted_lines(words)
             page_title = sorted_lines[0][1] if sorted_lines else ""
             for idx, img in enumerate(images, 1):
                 x0 = img.get("x0")
@@ -202,19 +310,42 @@ def extract_pdf_image_chunks(pdf_path, image_dir=None, image_dpi=200):
 
                 above_text = ""
                 if top is not None and sorted_lines:
-                    candidates = [line for t, line in sorted_lines if t < top and line]
-                    if candidates:
-                        above_text = candidates[-1]
+                    above_text = _closest_line_above(sorted_lines, top, max_gap=40.0)
+
+                caption_text = _closest_caption_line(sorted_lines, top, max_gap=35.0, prefer_above=True)
+                if not caption_text:
+                    caption_text = _closest_caption_line(sorted_lines, bottom, max_gap=35.0, prefer_above=False)
+                figure_no, figure_caption = _extract_figure_no_and_caption(caption_text)
+
+                ocr_text = ""
+                if image_path:
+                    try:
+                        ocr_text = clean_mojibake_text(_filter_ocr_text(_run_paddle_ocr_on_image(image_path)))
+                    except Exception:
+                        ocr_text = ""
+                ocr_preview = ocr_text[:300] if ocr_text else ""
 
                 content = f"PDF第{page_num}页图片{idx}"
-                if page_title:
+                if figure_caption:
+                    content += f"；图题：{figure_caption}"
+                elif page_title:
                     content += f"；标题：{page_title}"
                 if above_text:
                     content += f"；上文：{above_text}"
+                if ocr_preview:
+                    content += f"；图中文字：{ocr_preview}"
                 if width is not None and height is not None:
                     content += f"，宽高约{width}x{height}"
                 if image_path:
                     content += f"。文件: {image_path}"
+                entity_src = " ".join(
+                    [
+                        figure_caption or "",
+                        page_title or "",
+                        above_text or "",
+                        ocr_preview or "",
+                    ]
+                )
 
                 chunks.append(
                     {
@@ -224,8 +355,12 @@ def extract_pdf_image_chunks(pdf_path, image_dir=None, image_dpi=200):
                             "chunk_type": "image",
                             "page": page_num,
                             "image_path": image_path,
-                            "title": page_title,
+                            "title": figure_caption or page_title,
+                            "figure_no": figure_no,
+                            "figure_caption": figure_caption,
                             "above_text": above_text,
+                            "image_ocr_text": ocr_preview,
+                            "key_entities": _extract_key_entities(entity_src),
                         },
                     }
                 )

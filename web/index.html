@@ -1,0 +1,429 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pharma RAG QA</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #111827;
+      --muted: #6b7280;
+      --line: #d1d5db;
+      --ok: #0f766e;
+      --warn: #92400e;
+      --err: #991b1b;
+      --accent: #0f766e;
+      --accent2: #115e59;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+      background: radial-gradient(1200px 400px at 20% -10%, #dbeafe 0%, transparent 60%), var(--bg);
+      color: var(--text);
+    }
+    .wrap { max-width: 1100px; margin: 20px auto; padding: 0 14px 20px; }
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+    h1 { margin: 4px 0 6px; font-size: 24px; }
+    .sub { margin: 0; color: var(--muted); font-size: 13px; }
+    label { display:block; margin: 0 0 6px; color: var(--muted); font-size: 12px; }
+    textarea, input, select, button {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 9px 10px;
+      font-size: 14px;
+    }
+    textarea { min-height: 90px; resize: vertical; }
+    .row { display:grid; grid-template-columns: 1fr 130px 140px 130px; gap:10px; align-items:end; }
+    .actions { display:grid; grid-template-columns: 1fr 1fr 1fr; gap:10px; margin-top:10px; }
+    button { border: 0; background: var(--accent); color: #fff; cursor: pointer; }
+    button:hover { background: var(--accent2); }
+    .secondary { background: #374151; }
+    .ghost { background: #6b7280; }
+    .status { font-size: 13px; margin-top: 8px; min-height: 20px; }
+    .status.ok { color: var(--ok); }
+    .status.warn { color: var(--warn); }
+    .status.err { color: var(--err); }
+    .answer {
+      white-space: pre-wrap;
+      line-height: 1.6;
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 10px;
+      min-height: 64px;
+      font-size: 14px;
+      max-height: 220px;
+      overflow: auto;
+    }
+    .answer.expanded { max-height: none; }
+    .answer-tools {
+      margin-top: 8px;
+      display: flex;
+      gap: 8px;
+    }
+    .meta {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .e-item {
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 8px;
+      margin-top: 8px;
+      background: #fff;
+    }
+    .e-head {
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .e-btns { display:flex; gap:6px; }
+    .mini {
+      width: auto;
+      padding: 4px 8px;
+      font-size: 12px;
+      border-radius: 6px;
+      background: #4b5563;
+    }
+    .e-content {
+      margin-top: 6px;
+      white-space: pre-wrap;
+      line-height: 1.45;
+      font-size: 13px;
+      display: none;
+    }
+    .history-list {
+      display: grid;
+      gap: 8px;
+      max-height: 220px;
+      overflow: auto;
+    }
+    .history-item {
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 8px;
+      font-size: 12px;
+      cursor: pointer;
+      background: #fff;
+    }
+    .history-item:hover { border-color: #9ca3af; }
+    .history-q { color: #111827; }
+    .history-m { margin-top: 4px; color: var(--muted); }
+    @media (max-width: 900px) {
+      .row { grid-template-columns: 1fr; }
+      .actions { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="panel">
+      <h1>制药工艺智能问答</h1>
+      <p class="sub">Day1增强版：标准化输出、证据可追溯、会话历史、错误分级提示。</p>
+    </div>
+
+    <div class="panel">
+      <label for="q">问题</label>
+      <textarea id="q" placeholder="例如：精益六西格玛主要推进器是什么？"></textarea>
+      <div class="row">
+        <div>
+          <label for="mode">模式</label>
+          <select id="mode">
+            <option value="ask">RAG答案</option>
+            <option value="retrieve">仅检索</option>
+          </select>
+        </div>
+        <div>
+          <label for="topk">Top-K</label>
+          <input id="topk" type="number" min="1" max="20" value="5" />
+        </div>
+        <div>
+          <label for="hybrid">检索通道</label>
+          <select id="hybrid">
+            <option value="true">混合</option>
+            <option value="false">关键词</option>
+          </select>
+        </div>
+        <div>
+          <label for="tokens">Max Tokens</label>
+          <input id="tokens" type="number" min="32" max="1024" value="512" />
+        </div>
+      </div>
+      <div class="actions">
+        <button id="run">运行</button>
+        <button id="health" class="secondary">健康检查</button>
+        <button id="clear-history" class="ghost">清空历史</button>
+      </div>
+      <div class="status" id="status"></div>
+    </div>
+
+    <div class="panel">
+      <label>答案</label>
+      <div class="answer" id="answer">等待提问...</div>
+      <div class="answer-tools">
+        <button class="mini" id="toggle-answer">Expand</button>
+        <button class="mini" id="copy-answer">Copy</button>
+      </div>
+      <div class="meta" id="answer-meta"></div>
+    </div>
+
+    <div class="panel">
+      <label>证据</label>
+      <div id="evidence"></div>
+    </div>
+
+    <div class="panel">
+      <label>会话历史（点击回填）</label>
+      <div id="history" class="history-list"></div>
+    </div>
+  </div>
+
+  <script>
+    const HISTORY_KEY = "pharma_rag_history_v1";
+    const qEl = document.getElementById("q");
+    const modeEl = document.getElementById("mode");
+    const topkEl = document.getElementById("topk");
+    const hybridEl = document.getElementById("hybrid");
+    const tokensEl = document.getElementById("tokens");
+    const statusEl = document.getElementById("status");
+    const answerEl = document.getElementById("answer");
+    const answerMetaEl = document.getElementById("answer-meta");
+    const toggleAnswerEl = document.getElementById("toggle-answer");
+    const copyAnswerEl = document.getElementById("copy-answer");
+    const evidenceEl = document.getElementById("evidence");
+    const historyEl = document.getElementById("history");
+
+    function setStatus(text, level = "ok") {
+      statusEl.textContent = text || "";
+      statusEl.className = "status " + level;
+    }
+
+    function classifyError(errText) {
+      const t = (errText || "").toLowerCase();
+      if (t.includes("knowledge_base") || t.includes("ingest first")) {
+        return { level: "warn", msg: "知识库未就绪，请先执行 ingest/pdf-ingest。" };
+      }
+      if (t.includes("failed to fetch") || t.includes("network")) {
+        return { level: "err", msg: "无法连接后端服务，请检查 `python main.py serve`。" };
+      }
+      return { level: "err", msg: errText || "请求失败" };
+    }
+
+    function loadHistory() {
+      try {
+        return JSON.parse(localStorage.getItem(HISTORY_KEY) || "[]");
+      } catch {
+        return [];
+      }
+    }
+
+    function saveHistory(items) {
+      localStorage.setItem(HISTORY_KEY, JSON.stringify(items.slice(0, 40)));
+    }
+
+    function pushHistory(item) {
+      const items = loadHistory();
+      items.unshift(item);
+      saveHistory(items);
+      renderHistory();
+    }
+
+    function renderHistory() {
+      const items = loadHistory();
+      historyEl.innerHTML = "";
+      if (!items.length) {
+        historyEl.innerHTML = '<div class="history-item">暂无历史记录</div>';
+        return;
+      }
+      items.forEach((it) => {
+        const div = document.createElement("div");
+        div.className = "history-item";
+        div.innerHTML = `
+          <div class="history-q">${(it.question || "").replace(/</g, "&lt;")}</div>
+          <div class="history-m">${it.mode} | ${it.time || ""}</div>
+        `;
+        div.addEventListener("click", () => {
+          qEl.value = it.question || "";
+          modeEl.value = it.mode === "retrieve" ? "retrieve" : "ask";
+          topkEl.value = it.top_k || 5;
+          hybridEl.value = String(Boolean(it.hybrid));
+          tokensEl.value = it.max_new_tokens || 512;
+          answerEl.textContent = it.answer || "";
+          answerEl.classList.remove("expanded");
+          toggleAnswerEl.textContent = "Expand";
+          answerMetaEl.textContent = it.meta || "";
+          renderEvidence(it.evidence || []);
+        });
+        historyEl.appendChild(div);
+      });
+    }
+
+    function copyText(text) {
+      navigator.clipboard.writeText(text || "").catch(() => {});
+    }
+
+    function renderEvidence(items) {
+      evidenceEl.innerHTML = "";
+      if (!items || !items.length) {
+        evidenceEl.innerHTML = '<div class="e-item">暂无证据</div>';
+        return;
+      }
+      items.forEach((item, idx) => {
+        const box = document.createElement("div");
+        box.className = "e-item";
+        const meta = item.metadata || {};
+        const source = meta.source || "unknown";
+        const page = meta.page ? `, page=${meta.page}` : "";
+        const table = meta.source_table || meta.caption || "";
+        const channel = item.channel ? `, channel=${item.channel}` : "";
+        const score = item.adjusted_score != null ? `, score=${item.adjusted_score}` : "";
+
+        const head = document.createElement("div");
+        head.className = "e-head";
+        head.innerHTML = `
+          <div>[${idx + 1}] source=${source}${page}${channel}${score}${table ? ", table=" + table : ""}</div>
+          <div class="e-btns">
+            <button class="mini toggle">展开</button>
+            <button class="mini copy">复制</button>
+          </div>
+        `;
+
+        const content = document.createElement("div");
+        content.className = "e-content";
+        content.textContent = item.content || "";
+
+        head.querySelector(".toggle").addEventListener("click", () => {
+          const opened = content.style.display === "block";
+          content.style.display = opened ? "none" : "block";
+          head.querySelector(".toggle").textContent = opened ? "展开" : "折叠";
+        });
+        head.querySelector(".copy").addEventListener("click", () => copyText(item.content || ""));
+
+        box.appendChild(head);
+        box.appendChild(content);
+        evidenceEl.appendChild(box);
+      });
+    }
+
+    function toLocalTime() {
+      const d = new Date();
+      const pad = (n) => String(n).padStart(2, "0");
+      return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}`;
+    }
+
+    async function runQuery() {
+      const question = qEl.value.trim();
+      if (!question) {
+        setStatus("请输入问题。", "warn");
+        return;
+      }
+      const mode = modeEl.value;
+      const topK = Number(topkEl.value || 5);
+      const hybrid = hybridEl.value === "true";
+      const maxNewTokens = Number(tokensEl.value || 512);
+
+      setStatus("请求处理中...", "ok");
+      answerEl.textContent = "处理中...";
+      answerEl.classList.remove("expanded");
+      toggleAnswerEl.textContent = "Expand";
+      answerMetaEl.textContent = "";
+      evidenceEl.innerHTML = "";
+
+      try {
+        const endpoint = mode === "ask" ? "/ask" : "/retrieve";
+        const body = { question: question, top_k: topK, hybrid: hybrid };
+        if (mode === "ask") body.max_new_tokens = maxNewTokens;
+
+        const resp = await fetch(endpoint, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(body),
+        });
+        const data = await resp.json();
+        if (!resp.ok) throw new Error(data.detail || "请求失败");
+
+        const answer = mode === "ask" ? (data.answer || "") : "仅检索模式，无生成答案。";
+        answerEl.textContent = answer;
+        renderEvidence(data.evidence || []);
+
+        const metaParts = [];
+        if (data.retrieval_mode) metaParts.push(`retrieval_mode=${data.retrieval_mode}`);
+        if (data.confidence != null) metaParts.push(`confidence=${data.confidence}`);
+        if (data.used_ocr != null) metaParts.push(`used_ocr=${data.used_ocr}`);
+        if (data.latency_ms) {
+          if (data.latency_ms.total != null) metaParts.push(`latency=${data.latency_ms.total}ms`);
+          else if (data.latency_ms.retrieve != null) metaParts.push(`retrieve=${data.latency_ms.retrieve}ms`);
+        }
+        answerMetaEl.textContent = metaParts.join(" | ");
+
+        pushHistory({
+          question,
+          mode,
+          top_k: topK,
+          hybrid,
+          max_new_tokens: maxNewTokens,
+          answer,
+          evidence: data.evidence || [],
+          meta: answerMetaEl.textContent,
+          time: toLocalTime(),
+        });
+
+        setStatus("完成。", "ok");
+      } catch (err) {
+        const classified = classifyError(String(err));
+        answerEl.textContent = "请求失败。";
+        answerMetaEl.textContent = "";
+        setStatus(classified.msg, classified.level);
+      }
+    }
+
+    async function checkHealth() {
+      setStatus("检查服务状态...", "ok");
+      try {
+        const resp = await fetch("/health");
+        const data = await resp.json();
+        if (!resp.ok) throw new Error(data.detail || "health failed");
+        setStatus("服务正常：" + JSON.stringify(data), "ok");
+      } catch (err) {
+        const classified = classifyError(String(err));
+        setStatus(classified.msg, classified.level);
+      }
+    }
+
+    document.getElementById("run").addEventListener("click", runQuery);
+    document.getElementById("health").addEventListener("click", checkHealth);
+    toggleAnswerEl.addEventListener("click", () => {
+      const expanded = answerEl.classList.toggle("expanded");
+      toggleAnswerEl.textContent = expanded ? "Collapse" : "Expand";
+    });
+    copyAnswerEl.addEventListener("click", () => copyText(answerEl.textContent || ""));
+    document.getElementById("clear-history").addEventListener("click", () => {
+      localStorage.removeItem(HISTORY_KEY);
+      renderHistory();
+      setStatus("历史已清空。", "ok");
+    });
+
+    renderHistory();
+  </script>
+</body>
+</html>
+
+
+
+
+

@@ -8,6 +8,12 @@ from docx.oxml.text.paragraph import CT_P
 from docx.table import Table
 from docx.text.paragraph import Paragraph
 
+_FIGURE_CAPTION_RE = re.compile(
+    r"^\s*(图|表|Figure|Fig\.?)\s*([0-9一二三四五六七八九十百千IVXivx\-\._]*)\s*[:：.\-]?\s*(.*)$",
+    re.IGNORECASE,
+)
+_PADDLE_OCR = None
+
 
 def iter_block_items(doc):
     for child in doc.element.body.iterchildren():
@@ -22,6 +28,89 @@ def normalize_text(text):
     text = re.sub(r"[ \t]+", " ", text)
     text = re.sub(r"\n{3,}", "\n\n", text)
     return text.strip()
+
+
+def _extract_figure_no_and_caption(text):
+    text = normalize_text(text)
+    if not text:
+        return "", ""
+    m = _FIGURE_CAPTION_RE.match(text)
+    if not m:
+        return "", ""
+    prefix = m.group(1)
+    number = normalize_text(m.group(2) or "")
+    tail = normalize_text(m.group(3) or "")
+    figure_no = f"{prefix}{number}".strip() if number else prefix
+    caption = text if tail else figure_no
+    return figure_no, caption
+
+
+def _extract_key_entities(text, limit=8):
+    text = normalize_text(text)
+    if not text:
+        return []
+    cands = re.findall(r"[\u4e00-\u9fffA-Za-z0-9][\u4e00-\u9fffA-Za-z0-9\-/]{1,24}", text)
+    stop = {
+        "图片",
+        "图",
+        "表",
+        "第",
+        "页",
+        "文件",
+        "标题",
+        "上文",
+        "的",
+        "和",
+        "以及",
+        "进行",
+        "包括",
+    }
+    out = []
+    seen = set()
+    for c in cands:
+        c = c.strip("-_/")
+        if len(c) < 2:
+            continue
+        if c in stop:
+            continue
+        if c in seen:
+            continue
+        seen.add(c)
+        out.append(c)
+        if len(out) >= limit:
+            break
+    return out
+
+
+def _get_paddle_ocr():
+    global _PADDLE_OCR
+    if _PADDLE_OCR is not None:
+        return _PADDLE_OCR
+    try:
+        from paddleocr import PaddleOCR
+    except Exception:
+        _PADDLE_OCR = False
+        return _PADDLE_OCR
+    _PADDLE_OCR = PaddleOCR(use_angle_cls=True, lang="ch", show_log=False)
+    return _PADDLE_OCR
+
+
+def _ocr_image_text(image_path):
+    ocr = _get_paddle_ocr()
+    if not ocr:
+        return ""
+    try:
+        results = ocr.ocr(str(image_path), cls=True)
+    except Exception:
+        return ""
+    lines = []
+    for line in results or []:
+        if not line:
+            continue
+        txt = normalize_text(line[1][0] if len(line) > 1 and line[1] else "")
+        if txt:
+            lines.append(txt)
+    return normalize_text(" ".join(lines))[:300]
 
 
 def extract_table_rows(table):
@@ -225,21 +314,37 @@ def ingest_docx(doc_path, image_dir=None):
     section_title = ""
     table_index = 0
     short_buffer = ""
-    last_paragraph_text = ""
+    last_block_kind = ""
+    last_block_text = ""
     image_index = 0
 
     for block in iter_block_items(doc):
         if isinstance(block, Paragraph):
             raw_text = normalize_text(block.text)
+            figure_no, figure_caption = _extract_figure_no_and_caption(raw_text)
+            above_adjacent = last_block_text if last_block_kind == "paragraph" else ""
             # Extract images even if paragraph text is empty/ignored.
             images, image_index = _iter_paragraph_images(block, doc, doc_path, image_dir, image_index)
             for img_path, idx in images:
                 content = f"图片：{doc_path.name} 第{idx}张"
-                if section_title:
+                if figure_caption:
+                    content += f"；图题：{figure_caption}"
+                elif section_title:
                     content += f"；标题：{section_title}"
-                if last_paragraph_text:
-                    content += f"；上文：{last_paragraph_text}"
+                if above_adjacent:
+                    content += f"；上文：{above_adjacent}"
+                ocr_text = _ocr_image_text(img_path)
+                if ocr_text:
+                    content += f"；图中文字：{ocr_text}"
                 content += f"。文件: {img_path}"
+                entity_src = " ".join(
+                    [
+                        section_title or "",
+                        figure_caption or "",
+                        above_adjacent or "",
+                        ocr_text or "",
+                    ]
+                )
                 chunks.append(
                     {
                         "content": content,
@@ -249,12 +354,19 @@ def ingest_docx(doc_path, image_dir=None):
                             "image_path": str(img_path),
                             "doc": doc_path.name,
                             "section_title": section_title,
-                            "above_text": last_paragraph_text,
+                            "title": figure_caption or section_title,
+                            "figure_no": figure_no,
+                            "figure_caption": figure_caption,
+                            "above_text": above_adjacent,
+                            "key_entities": _extract_key_entities(entity_src),
+                            "image_ocr_text": ocr_text,
                         },
                     }
                 )
 
             if should_skip_paragraph(raw_text):
+                last_block_kind = "paragraph" if raw_text else "empty"
+                last_block_text = raw_text if raw_text else ""
                 continue
 
             if block.style and block.style.name:
@@ -262,6 +374,8 @@ def ingest_docx(doc_path, image_dir=None):
                 if style_name.startswith("heading") or "标题" in block.style.name:
                     if raw_text:
                         section_title = raw_text
+                    last_block_kind = "heading"
+                    last_block_text = raw_text
                     continue
 
             if len(raw_text) < 10:
@@ -269,6 +383,8 @@ def ingest_docx(doc_path, image_dir=None):
                     short_buffer = f"{short_buffer} {raw_text}"
                 else:
                     short_buffer = raw_text
+                last_block_kind = "paragraph"
+                last_block_text = raw_text
                 continue
 
             if short_buffer:
@@ -276,10 +392,13 @@ def ingest_docx(doc_path, image_dir=None):
                 short_buffer = ""
 
             chunks.append({"content": raw_text, "metadata": {}})
-            last_paragraph_text = raw_text
+            last_block_kind = "paragraph"
+            last_block_text = raw_text
         else:
             if short_buffer:
                 short_buffer = ""
+            last_block_kind = "table"
+            last_block_text = ""
 
             rows = extract_table_rows(block)
             if not rows:

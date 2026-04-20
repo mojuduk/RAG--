@@ -7,3 +7,6 @@ sentence-transformers
 chromadb
 pdfplumber
 tabula-py
+fastapi
+uvicorn
+requests
